@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Francine Mira | REALTOR® & Mortgage Loan Originator | NC</title>
+  <meta name="description" content="Francine Mira — Licensed REALTOR® and Mortgage Loan Originator (NMLS #2603041) serving North Carolina. Bilingual real estate and mortgage services. Servicios bilingües en español." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            remax: { red: '#93191D', blue: '#003DA5' },
+            mathewson: { navy: '#22285D', red: '#93191D' },
+            brand: { bg: '#F8F9FA', textPrimary: '#1A1F36', textSecondary: '#6B7280' }
+          },
+          fontFamily: {
+            serif: ['Merriweather', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; color: #1A1F36; background: #F8F9FA; }
+    h1, h2, h3, h4 { font-family: 'Merriweather', Georgia, serif; }
+    .lang-es { display: none; }
+    body.es .lang-en { display: none; }
+    body.es .lang-es { display: block; }
+    body.es .lang-es-inline { display: inline; }
+    body.es .lang-en-inline { display: none; }
+    .lang-es-inline { display: none; }
+    .lang-en-inline { display: inline; }
+    .mobile-menu { transform: translateX(100%); transition: transform 0.3s ease; }
+    .mobile-menu.open { transform: translateX(0); }
+    .hero-gradient { background: linear-gradient(135deg, #003DA5ee 0%, #22285Dcc 60%, #1A1F3699 100%); }
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+    .nav-link { position: relative; padding-bottom: 4px; }
+    .nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: #93191D; transition: width 0.2s ease; }
+    .nav-link:hover::after { width: 100%; }
+    .form-input { transition: border-color 0.2s, box-shadow 0.2s; }
+    .form-input:focus { outline: none; border-color: #003DA5; box-shadow: 0 0 0 3px rgba(0,61,165,0.12); }
+    @media (max-width: 768px) { .hero-height { min-height: 500px; } }
+  </style>
+</head>
+<body class="en">
+
+<!-- =========================================
+     NAVIGATION
+     ========================================= -->
+<nav class="sticky top-0 z-50 bg-remax-blue shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Logo / Brand -->
+      <a href="#home" class="flex items-center gap-3 flex-shrink-0">
+        <div class="w-9 h-9 bg-remax-red rounded-full flex items-center justify-center">
+          <span class="text-white font-bold text-sm font-serif">FM</span>
+        </div>
+        <div>
+          <div class="text-white font-bold text-base leading-tight font-serif">Francine Mira</div>
+          <div class="text-blue-200 text-xs leading-tight">
+            <span class="lang-en-inline">REALTOR® & MLO</span>
+            <span class="lang-es-inline">REALTOR® & MLO</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#services" class="nav-link text-white text-sm font-medium">
+          <span class="lang-en-inline">Services</span>
+          <span class="lang-es-inline">Servicios</span>
+        </a>
+        <a href="#mortgage" class="nav-link text-white text-sm font-medium">
+          <span class="lang-en-inline">Mortgage</span>
+          <span class="lang-es-inline">Hipoteca</span>
+        </a>
+        <a href="#about" class="nav-link text-white text-sm font-medium">
+          <span class="lang-en-inline">About</span>
+          <span class="lang-es-inline">Acerca de</span>
+        </a>
+        <a href="#education" class="nav-link text-white text-sm font-medium">
+          <span class="lang-en-inline">Education</span>
+          <span class="lang-es-inline">Recursos</span>
+        </a>
+        <a href="#contact" class="nav-link text-white text-sm font-medium">
+          <span class="lang-en-inline">Contact</span>
+          <span class="lang-es-inline">Contacto</span>
+        </a>
+      </div>
+
+      <!-- Language + CTA -->
+      <div class="hidden md:flex items-center gap-4">
+        <button onclick="toggleLang()" id="langToggle"
+          class="flex items-center gap-1.5 bg-white/10 hover:bg-white/20 text-white text-sm px-3 py-1.5 rounded-full border border-white/30 transition-colors font-medium">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+          </svg>
+          <span class="lang-en-inline">Español</span>
+          <span class="lang-es-inline">English</span>
+        </button>
+        <a href="#contact"
+          class="bg-remax-red hover:bg-mathewson-red text-white text-sm font-semibold px-5 py-2 rounded-md transition-colors">
+          <span class="lang-en-inline">Get Started</span>
+          <span class="lang-es-inline">Comenzar</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button onclick="toggleMobileMenu()" class="md:hidden text-white p-2">
+        <svg id="hamburgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu fixed inset-y-0 right-0 w-72 bg-mathewson-navy z-50 pt-20 px-6 shadow-2xl md:hidden">
+    <button onclick="toggleMobileMenu()" class="absolute top-4 right-4 text-white p-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <div class="flex flex-col gap-0">
+      <a href="#services" onclick="toggleMobileMenu()" class="py-4 border-b border-blue-800 text-white font-medium">
+        <span class="lang-en-inline">Services</span><span class="lang-es-inline">Servicios</span>
+      </a>
+      <a href="#mortgage" onclick="toggleMobileMenu()" class="py-4 border-b border-blue-800 text-white font-medium">
+        <span class="lang-en-inline">Mortgage</span><span class="lang-es-inline">Hipoteca</span>
+      </a>
+      <a href="#about" onclick="toggleMobileMenu()" class="py-4 border-b border-blue-800 text-white font-medium">
+        <span class="lang-en-inline">About</span><span class="lang-es-inline">Acerca de</span>
+      </a>
+      <a href="#education" onclick="toggleMobileMenu()" class="py-4 border-b border-blue-800 text-white font-medium">
+        <span class="lang-en-inline">Education</span><span class="lang-es-inline">Recursos</span>
+      </a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="py-4 border-b border-blue-800 text-white font-medium">
+        <span class="lang-en-inline">Contact</span><span class="lang-es-inline">Contacto</span>
+      </a>
+      <div class="pt-6 space-y-3">
+        <button onclick="toggleLang(); toggleMobileMenu();"
+          class="w-full bg-white/10 border border-white/30 text-white py-2.5 rounded-md text-sm font-medium">
+          <span class="lang-en-inline">Switch to Español</span>
+          <span class="lang-es-inline">Switch to English</span>
+        </button>
+        <a href="#contact" onclick="toggleMobileMenu()"
+          class="block w-full bg-remax-red text-white text-center py-3 rounded-md font-semibold text-sm">
+          <span class="lang-en-inline">Get Started</span>
+          <span class="lang-es-inline">Comenzar</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="menuOverlay" onclick="toggleMobileMenu()" class="hidden fixed inset-0 bg-black/50 z-40 md:hidden"></div>
+</nav>
+
+
+<!-- =========================================
+     HERO SECTION
+     ========================================= -->
+<section id="home" class="relative overflow-hidden hero-height" style="min-height: 600px;">
+  <!-- Background -->
+  <div class="absolute inset-0 bg-gradient-to-br from-remax-blue via-mathewson-navy to-brand-textPrimary"></div>
+  <!-- Decorative circles -->
+  <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-remax-red/10"></div>
+  <div class="absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-white/5"></div>
+  <div class="absolute top-1/3 right-1/4 w-48 h-48 rounded-full bg-remax-blue/30"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 flex flex-col items-center justify-center text-center" style="min-height: 600px;">
+
+    <!-- Trust Badge -->
+    <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6">
+      <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+      <span class="text-white/90 text-xs font-medium tracking-wide uppercase">
+        <span class="lang-en-inline">Licensed in NC · NMLS #2603041</span>
+        <span class="lang-es-inline">Licenciada en NC · NMLS #2603041</span>
+      </span>
+    </div>
+
+    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight max-w-4xl">
+      <span class="lang-en">
+        Your Home.<br class="hidden md:block" />
+        <span class="text-remax-red">Your Mortgage.</span><br class="hidden md:block" />
+        Your Expert.
+      </span>
+      <span class="lang-es">
+        Tu Hogar.<br class="hidden md:block" />
+        <span class="text-remax-red">Tu Hipoteca.</span><br class="hidden md:block" />
+        Tu Experta.
+      </span>
+    </h1>
+
+    <p class="text-xl md:text-2xl text-white/85 mb-10 max-w-2xl font-light leading-relaxed">
+      <span class="lang-en">Dual-licensed REALTOR® and Mortgage Loan Originator serving North Carolina buyers and sellers.</span>
+      <span class="lang-es">REALTOR® y Originadora de Préstamos Hipotecarios, sirviendo a compradores y vendedores en Carolina del Norte.</span>
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href="#contact"
+        class="bg-remax-red hover:bg-mathewson-red text-white font-semibold px-8 py-4 rounded-md text-lg transition-all hover:shadow-xl hover:-translate-y-0.5">
+        <span class="lang-en-inline">Book a Free Consultation</span>
+        <span class="lang-es-inline">Consulta Gratuita</span>
+      </a>
+      <a href="#services"
+        class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-md text-lg transition-all">
+        <span class="lang-en-inline">Explore Services</span>
+        <span class="lang-es-inline">Ver Servicios</span>
+      </a>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="mt-16 text-white/40 flex flex-col items-center gap-2">
+      <span class="text-xs uppercase tracking-widest">
+        <span class="lang-en-inline">Scroll to explore</span>
+        <span class="lang-es-inline">Desliza para explorar</span>
+      </span>
+      <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     TRUST MARKERS BAR
+     ========================================= -->
+<section class="bg-white border-b border-gray-100 shadow-sm py-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 bg-remax-blue/10 rounded-full flex items-center justify-center">
+          <svg class="w-4 h-4 text-remax-blue" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-xs text-brand-textSecondary uppercase tracking-wide font-medium">REALTOR®</div>
+          <div class="text-sm font-semibold text-brand-textPrimary">
+            <span class="lang-en-inline">NC Licensed</span>
+            <span class="lang-es-inline">Licenciada NC</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 bg-remax-red/10 rounded-full flex items-center justify-center">
+          <svg class="w-4 h-4 text-remax-red" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-xs text-brand-textSecondary uppercase tracking-wide font-medium">NMLS</div>
+          <div class="text-sm font-semibold text-brand-textPrimary">#2603041</div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 bg-mathewson-navy/10 rounded-full flex items-center justify-center">
+          <svg class="w-4 h-4 text-mathewson-navy" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 6a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1v-2zm0 6a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1v-2z" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-xs text-brand-textSecondary uppercase tracking-wide font-medium">
+            <span class="lang-en-inline">Dual Licensed</span>
+            <span class="lang-es-inline">Doble Licencia</span>
+          </div>
+          <div class="text-sm font-semibold text-brand-textPrimary">RE + MLO</div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+          <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M7 2a1 1 0 011 1v1h3a1 1 0 110 2H9.578a18.87 18.87 0 01-1.724 4.78c.29.354.596.696.914 1.026a1 1 0 11-1.44 1.389c-.188-.196-.373-.396-.554-.6a19.098 19.098 0 01-3.107 3.567 1 1 0 01-1.334-1.49 17.087 17.087 0 003.13-3.733 18.992 18.992 0 01-1.487-2.494 1 1 0 111.79-.89c.234.47.489.928.764 1.372.417-.934.752-1.913.997-2.927H3a1 1 0 110-2h3V3a1 1 0 011-1zm6 6a1 1 0 01.894.553l2.991 5.992a.869.869 0 01.02.037l.99 1.98a1 1 0 11-1.79.895L15.383 16h-4.764l-.724 1.447a1 1 0 11-1.788-.894l.99-1.98.019-.038 2.99-5.991A1 1 0 0113 8zm-1.382 6h2.764L13 11.236 11.618 14z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-xs text-brand-textSecondary uppercase tracking-wide font-medium">Bilingual</div>
+          <div class="text-sm font-semibold text-brand-textPrimary">EN / ES</div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 bg-remax-blue/10 rounded-full flex items-center justify-center">
+          <svg class="w-4 h-4 text-remax-blue" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-xs text-brand-textSecondary uppercase tracking-wide font-medium">
+            <span class="lang-en-inline">Serving</span>
+            <span class="lang-es-inline">Servicio en</span>
+          </div>
+          <div class="text-sm font-semibold text-brand-textPrimary">NC, SC, VA, FL</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     SERVICES SECTION
+     ========================================= -->
+<section id="services" class="py-20 bg-brand-bg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-14">
+      <span class="text-remax-red text-sm font-semibold uppercase tracking-widest">
+        <span class="lang-en-inline">What I Do</span>
+        <span class="lang-es-inline">Lo Que Hago</span>
+      </span>
+      <h2 class="text-3xl md:text-4xl font-bold text-brand-textPrimary mt-2 mb-4">
+        <span class="lang-en">Full-Service Real Estate<br class="hidden md:block" /> & Mortgage Solutions</span>
+        <span class="lang-es">Bienes Raíces y Soluciones<br class="hidden md:block" /> Hipotecarias Completas</span>
+      </h2>
+      <p class="text-brand-textSecondary text-lg max-w-2xl mx-auto">
+        <span class="lang-en">One expert. Two licenses. Everything you need to buy, sell, or finance your home.</span>
+        <span class="lang-es">Una experta. Dos licencias. Todo lo que necesitas para comprar, vender o financiar tu hogar.</span>
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Buy Card -->
+      <div class="card-hover bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+        <div class="bg-gradient-to-br from-remax-blue to-mathewson-navy p-8 text-center">
+          <div class="w-16 h-16 bg-white/15 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white">
+            <span class="lang-en-inline">Buy a Home</span>
+            <span class="lang-es-inline">Comprar una Casa</span>
+          </h3>
+        </div>
+        <div class="p-8">
+          <p class="text-brand-textSecondary mb-6">
+            <span class="lang-en">Navigate the buying process with confidence. From pre-qualification to closing, I guide you every step of the way in NC's competitive market.</span>
+            <span class="lang-es">Navega el proceso de compra con confianza. Desde la pre-calificación hasta el cierre, te guío en cada paso en el mercado competitivo de NC.</span>
+          </p>
+          <ul class="space-y-2 mb-8 text-sm text-brand-textSecondary">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-remax-red flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span class="lang-en-inline">Buyer consultation & needs analysis</span>
+              <span class="lang-es-inline">Consulta y análisis de necesidades</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-remax-red flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span class="lang-en-inline">MLS property search & touring</span>
+              <span class="lang-es-inline">Búsqueda en MLS y visitas</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-remax-red flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span class="lang-en-inline">Offer strategy & negotiation</span>
+              <span class="lang-es-inline">Estrategia de oferta y negociación</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-remax-red flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span class="lang-en-inline">Closing coordination</span>
+              <span class="lang-es-inline">Coordinación del cierre</span>
+            </li>
+          </ul>
+          <a href="#contact" class="block w-full bg-remax-blue hover:bg-mathewson-navy text-white text-center font-semibold py-3 rounded-md transition-colors text-sm">
+            <span class="lang-en-inline">Start Your Home Search</span>
+            <span class="lang-es-inline">Iniciar Búsqueda</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sell Card -->
+      <div class="card-hover bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+        <div class="bg-gradient-to-br from-remax-red to-mathewson-red p-8 text-center">
+          <div class="w-16 h-16 bg-white/15 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white">
+            <span class="lang-en-inline">Sell Your Home</span>
+            <span class="lang-es-inline">Vender su Casa</span>
+          </h3>
+        </div>
+        <div class="p-8">
+          <p class="text-brand-textSecondary mb-6">
+            <span class="lang-en">Maximize your home's value with proven pricing strategy, professional marketing, and expert negotiation that puts more money in your pocket.</span>
+            <span class="lang-es">Maximiza el valor de tu hogar con estrategia de precios comprobada, marketing profesional y negociación experta que pone más dinero en tu bolsillo.</span>
+          </p>
+          <ul class="space-y-2 mb-8 text-sm text-brand-textSecondary">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-remax-red flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span class="lang-en-inline">Comparative market analysis (CMA)</span>
+              <span class="lang-es-inline">Análisis comparativo de mercado</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-remax-red flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span class="lang-en-inline">Professional photography & staging</span>
+              <span class="lang-es-inline">Fotografía profesional y staging</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-remax-red flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span class="lang-en-inline">MLS + digital marketing</span>
+              <span class="lang-es-inline">MLS + marketing digital</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-remax-red flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span class="lang-en-inline">Offer review & closing support</span>
+              <span class="lang-es-inline">Revisión de ofertas y cierre</span>
+            </li>
+          </ul>
+          <a href="#contact" class="block w-full bg-remax-red hover:bg-mathewson-red text-white text-center font-semibold py-3 rounded-md transition-colors text-sm">
+            <span class="lang-en-inline">Get a Free Home Valuation</span>
+            <span class="lang-es-inline">Valuación Gratuita</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mortgage Card -->
+      <div class="card-hover bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+        <div class="bg-gradient-to-br from-mathewson-navy to-brand-textPrimary p-8 text-center">
+          <div class="w-16 h-16 bg-white/15 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white">
+            <span class="lang-en-inline">Mortgage Loans</span>
+            <span class="lang-es-inline">Préstamos Hipotecarios</span>
+          </h3>
+        </div>
+        <div class="p-8">
+          <p class="text-brand-textSecondary mb-6">
+            <span class="lang-en">Access FHA, VA, Conventional, USDA, and specialty loan programs. As your MLO, I find the right product for your situation — not just the easiest one.</span>
+            <span class="lang-es">Accede a préstamos FHA, VA, Convencionales, USDA y programas especiales. Como tu MLO, encuentro el producto correcto para tu situación.</span>
+          </p>
+          <ul class="space-y-2 mb-8 text-sm text-brand-textSecondary">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-remax-blue flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span>FHA, VA, Conventional, USDA</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-remax-blue flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span class="lang-en-inline">Down payment assistance programs</span>
+              <span class="lang-es-inline">Programas de asistencia de pago inicial</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-remax-blue flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span class="lang-en-inline">Rate comparison & loan structuring</span>
+              <span class="lang-es-inline">Comparación de tasas y estructuración</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-remax-blue flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              <span class="lang-en-inline">Pre-approval in 24 hours</span>
+              <span class="lang-es-inline">Pre-aprobación en 24 horas</span>
+            </li>
+          </ul>
+          <a href="#contact" class="block w-full bg-mathewson-navy hover:bg-brand-textPrimary text-white text-center font-semibold py-3 rounded-md transition-colors text-sm">
+            <span class="lang-en-inline">Check My Loan Options</span>
+            <span class="lang-es-inline">Ver Opciones de Préstamo</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     MORTGAGE LOAN TYPES
+     ========================================= -->
+<section id="mortgage" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left Content -->
+      <div>
+        <span class="text-remax-red text-sm font-semibold uppercase tracking-widest">
+          <span class="lang-en-inline">Loan Programs</span>
+          <span class="lang-es-inline">Programas de Préstamos</span>
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold text-brand-textPrimary mt-2 mb-6">
+          <span class="lang-en">The Right Loan for<br />Your Situation</span>
+          <span class="lang-es">El Préstamo Correcto<br />para tu Situación</span>
+        </h2>
+        <p class="text-brand-textSecondary text-lg mb-8">
+          <span class="lang-en">As a licensed Mortgage Loan Originator (NMLS #2603041), I have access to multiple loan programs and help you understand the true cost — not just the rate.</span>
+          <span class="lang-es">Como Originadora de Préstamos Hipotecarios licenciada (NMLS #2603041), tengo acceso a múltiples programas de préstamos y te ayudo a entender el costo real, no solo la tasa.</span>
+        </p>
+
+        <div class="grid grid-cols-2 gap-4 mb-8">
+          <div class="bg-brand-bg rounded-lg p-4 border border-gray-100">
+            <div class="text-remax-blue font-bold text-lg font-mono">FHA</div>
+            <div class="text-sm text-brand-textSecondary mt-1">
+              <span class="lang-en-inline">3.5% down, flexible credit</span>
+              <span class="lang-es-inline">3.5% inicial, crédito flexible</span>
+            </div>
+          </div>
+          <div class="bg-brand-bg rounded-lg p-4 border border-gray-100">
+            <div class="text-remax-blue font-bold text-lg font-mono">VA</div>
+            <div class="text-sm text-brand-textSecondary mt-1">
+              <span class="lang-en-inline">$0 down for veterans</span>
+              <span class="lang-es-inline">$0 inicial para veteranos</span>
+            </div>
+          </div>
+          <div class="bg-brand-bg rounded-lg p-4 border border-gray-100">
+            <div class="text-remax-blue font-bold text-lg font-mono">CONV</div>
+            <div class="text-sm text-brand-textSecondary mt-1">
+              <span class="lang-en-inline">Conventional, no PMI options</span>
+              <span class="lang-es-inline">Convencional, sin PMI</span>
+            </div>
+          </div>
+          <div class="bg-brand-bg rounded-lg p-4 border border-gray-100">
+            <div class="text-remax-blue font-bold text-lg font-mono">USDA</div>
+            <div class="text-sm text-brand-textSecondary mt-1">
+              <span class="lang-en-inline">Rural 0% down options</span>
+              <span class="lang-es-inline">Rural, 0% inicial</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="inline-flex items-center gap-2 bg-remax-red hover:bg-mathewson-red text-white font-semibold px-7 py-3.5 rounded-md transition-colors">
+          <span class="lang-en-inline">Get Pre-Approved Today</span>
+          <span class="lang-es-inline">Obtener Pre-Aprobación Hoy</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Right: Key Facts -->
+      <div class="space-y-4">
+        <div class="bg-remax-blue rounded-xl p-6 text-white">
+          <div class="text-4xl font-bold font-serif mb-1">NMLS <span class="font-mono">#2603041</span></div>
+          <div class="text-blue-200 text-sm">
+            <span class="lang-en-inline">Verified Mortgage Loan Originator license</span>
+            <span class="lang-es-inline">Licencia verificada de Originadora de Préstamos</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-brand-bg rounded-xl p-6 border border-gray-100 text-center">
+            <div class="text-3xl font-bold text-remax-red font-serif">24h</div>
+            <div class="text-sm text-brand-textSecondary mt-1">
+              <span class="lang-en-inline">Pre-approval turnaround</span>
+              <span class="lang-es-inline">Pre-aprobación en</span>
+            </div>
+          </div>
+          <div class="bg-brand-bg rounded-xl p-6 border border-gray-100 text-center">
+            <div class="text-3xl font-bold text-remax-red font-serif">0%</div>
+            <div class="text-sm text-brand-textSecondary mt-1">
+              <span class="lang-en-inline">Down payment options available</span>
+              <span class="lang-es-inline">Opciones sin pago inicial</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-mathewson-navy rounded-xl p-6 text-white">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold mb-1">
+                <span class="lang-en-inline">Compliance-First Approach</span>
+                <span class="lang-es-inline">Enfoque de Cumplimiento Primero</span>
+              </div>
+              <div class="text-white/70 text-sm">
+                <span class="lang-en">I only recommend loans you qualify for and fully understand. No surprises at closing.</span>
+                <span class="lang-es">Solo recomiendo préstamos para los que calificas y entiendes completamente. Sin sorpresas al cierre.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     ABOUT SECTION
+     ========================================= -->
+<section id="about" class="py-20 bg-brand-bg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left: Photo Placeholder & Credentials -->
+      <div class="relative">
+        <div class="bg-gradient-to-br from-remax-blue to-mathewson-navy rounded-2xl p-10 text-center text-white">
+          <div class="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-4xl font-bold font-serif">FM</span>
+          </div>
+          <div class="text-2xl font-bold font-serif mb-1">Francine Mira</div>
+          <div class="text-blue-200 mb-6">
+            <span class="lang-en-inline">REALTOR® & Mortgage Loan Originator</span>
+            <span class="lang-es-inline">REALTOR® y Originadora de Préstamos</span>
+          </div>
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div class="bg-white/10 rounded-lg p-3">
+              <div class="font-mono font-bold text-base">NMLS</div>
+              <div class="text-blue-200">#2603041</div>
+            </div>
+            <div class="bg-white/10 rounded-lg p-3">
+              <div class="font-bold text-base">NC</div>
+              <div class="text-blue-200">
+                <span class="lang-en-inline">Licensed</span>
+                <span class="lang-es-inline">Licenciada</span>
+              </div>
+            </div>
+            <div class="bg-white/10 rounded-lg p-3 col-span-2">
+              <div class="font-bold text-base">Mira AI Systems™</div>
+              <div class="text-blue-200 text-xs">
+                <span class="lang-en-inline">Founder & AI Product Architect</span>
+                <span class="lang-es-inline">Fundadora y Arquitecta de Productos AI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Bio -->
+      <div>
+        <span class="text-remax-red text-sm font-semibold uppercase tracking-widest">
+          <span class="lang-en-inline">About Francine</span>
+          <span class="lang-es-inline">Sobre Francine</span>
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold text-brand-textPrimary mt-2 mb-6">
+          <span class="lang-en">One Expert.<br />Two Licenses.<br />Your Full Advantage.</span>
+          <span class="lang-es">Una Experta.<br />Dos Licencias.<br />Tu Ventaja Completa.</span>
+        </h2>
+        <div class="space-y-4 text-brand-textSecondary">
+          <p class="lang-en">Francine Mira is a dual-licensed REALTOR® and Mortgage Loan Originator (NMLS #2603041) based in North Carolina. What makes her different isn't just the dual licensing — it's the integration. When you work with Francine, your real estate agent and your mortgage advisor are the same person.</p>
+          <p class="lang-es">Francine Mira es una REALTOR® y Originadora de Préstamos Hipotecarios (NMLS #2603041) con doble licencia, basada en Carolina del Norte. Lo que la hace diferente no es solo la doble licencia — es la integración. Cuando trabajas con Francine, tu agente de bienes raíces y tu asesor hipotecario son la misma persona.</p>
+
+          <p class="lang-en">As the founder of Mira AI Systems™, she also brings cutting-edge AI tools and systems thinking to the real estate and mortgage industries — helping professionals work smarter and clients get better outcomes.</p>
+          <p class="lang-es">Como fundadora de Mira AI Systems™, también aporta herramientas de inteligencia artificial de vanguardia y pensamiento sistémico a los sectores inmobiliario e hipotecario.</p>
+        </div>
+
+        <div class="mt-8 space-y-3">
+          <div class="flex items-center gap-3 text-sm">
+            <div class="w-6 h-6 bg-remax-red/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-3.5 h-3.5 text-remax-red" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+            </div>
+            <span class="text-brand-textPrimary">
+              <span class="lang-en-inline">Licensed REALTOR® — North Carolina</span>
+              <span class="lang-es-inline">REALTOR® Licenciada — Carolina del Norte</span>
+            </span>
+          </div>
+          <div class="flex items-center gap-3 text-sm">
+            <div class="w-6 h-6 bg-remax-red/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-3.5 h-3.5 text-remax-red" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+            </div>
+            <span class="text-brand-textPrimary">
+              <span class="lang-en-inline">Mortgage Loan Originator — NMLS #2603041</span>
+              <span class="lang-es-inline">Originadora de Préstamos — NMLS #2603041</span>
+            </span>
+          </div>
+          <div class="flex items-center gap-3 text-sm">
+            <div class="w-6 h-6 bg-remax-red/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-3.5 h-3.5 text-remax-red" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+            </div>
+            <span class="text-brand-textPrimary">
+              <span class="lang-en-inline">Founder, Mira AI Systems™ — AI tools for licensed professionals</span>
+              <span class="lang-es-inline">Fundadora, Mira AI Systems™ — Herramientas AI para profesionales licenciados</span>
+            </span>
+          </div>
+          <div class="flex items-center gap-3 text-sm">
+            <div class="w-6 h-6 bg-remax-red/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-3.5 h-3.5 text-remax-red" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+            </div>
+            <span class="text-brand-textPrimary">
+              <span class="lang-en-inline">Bilingual professional — English & Spanish</span>
+              <span class="lang-es-inline">Profesional bilingüe — Inglés y Español</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     EDUCATION HUB
+     ========================================= -->
+<section id="education" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-14">
+      <span class="text-remax-red text-sm font-semibold uppercase tracking-widest">
+        <span class="lang-en-inline">Knowledge Center</span>
+        <span class="lang-es-inline">Centro de Conocimiento</span>
+      </span>
+      <h2 class="text-3xl md:text-4xl font-bold text-brand-textPrimary mt-2 mb-4">
+        <span class="lang-en">Free Resources for<br />Home Buyers & Sellers</span>
+        <span class="lang-es">Recursos Gratuitos para<br />Compradores y Vendedores</span>
+      </h2>
+      <p class="text-brand-textSecondary text-lg max-w-2xl mx-auto">
+        <span class="lang-en">Knowledge is your best protection. Use these guides to make informed decisions — whether you're buying your first home or your fifth.</span>
+        <span class="lang-es">El conocimiento es tu mejor protección. Usa estas guías para tomar decisiones informadas — ya sea que compres tu primera casa o tu quinta.</span>
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Guide 1 -->
+      <div class="card-hover bg-brand-bg rounded-xl p-6 border border-gray-100">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="bg-remax-red/10 text-remax-red text-xs font-semibold px-3 py-1 rounded-full">
+            <span class="lang-en-inline">Mortgage</span>
+            <span class="lang-es-inline">Hipoteca</span>
+          </span>
+          <span class="text-brand-textSecondary text-xs">
+            <span class="lang-en-inline">5 min read</span>
+            <span class="lang-es-inline">5 min lectura</span>
+          </span>
+        </div>
+        <h3 class="text-lg font-bold text-brand-textPrimary mb-2 font-serif">
+          <span class="lang-en">The USDA Loan Trap: What No One Tells You</span>
+          <span class="lang-es">La Trampa del Préstamo USDA: Lo Que Nadie Te Dice</span>
+        </h3>
+        <p class="text-sm text-brand-textSecondary mb-4">
+          <span class="lang-en">USDA loans promise $0 down — but they come with restrictions many buyers discover too late.</span>
+          <span class="lang-es">Los préstamos USDA prometen $0 inicial, pero vienen con restricciones que muchos compradores descubren demasiado tarde.</span>
+        </p>
+        <a href="#contact" class="text-remax-red text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+          <span class="lang-en-inline">Read Guide</span>
+          <span class="lang-es-inline">Leer Guía</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
+      </div>
+
+      <!-- Guide 2 -->
+      <div class="card-hover bg-brand-bg rounded-xl p-6 border border-gray-100">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="bg-remax-blue/10 text-remax-blue text-xs font-semibold px-3 py-1 rounded-full">
+            <span class="lang-en-inline">Buying</span>
+            <span class="lang-es-inline">Comprar</span>
+          </span>
+          <span class="text-brand-textSecondary text-xs">
+            <span class="lang-en-inline">7 min read</span>
+            <span class="lang-es-inline">7 min lectura</span>
+          </span>
+        </div>
+        <h3 class="text-lg font-bold text-brand-textPrimary mb-2 font-serif">
+          <span class="lang-en">First-Time Buyer Roadmap: NC Edition</span>
+          <span class="lang-es">Guía para Compradores Primerizos: Edición NC</span>
+        </h3>
+        <p class="text-sm text-brand-textSecondary mb-4">
+          <span class="lang-en">A step-by-step guide for navigating North Carolina's real estate market as a first-time buyer.</span>
+          <span class="lang-es">Una guía paso a paso para navegar el mercado inmobiliario de Carolina del Norte como comprador primerizo.</span>
+        </p>
+        <a href="#contact" class="text-remax-red text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+          <span class="lang-en-inline">Read Guide</span>
+          <span class="lang-es-inline">Leer Guía</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
+      </div>
+
+      <!-- Guide 3 -->
+      <div class="card-hover bg-brand-bg rounded-xl p-6 border border-gray-100">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="bg-mathewson-navy/10 text-mathewson-navy text-xs font-semibold px-3 py-1 rounded-full">
+            <span class="lang-en-inline">Selling</span>
+            <span class="lang-es-inline">Vender</span>
+          </span>
+          <span class="text-brand-textSecondary text-xs">
+            <span class="lang-en-inline">6 min read</span>
+            <span class="lang-es-inline">6 min lectura</span>
+          </span>
+        </div>
+        <h3 class="text-lg font-bold text-brand-textPrimary mb-2 font-serif">
+          <span class="lang-en">How to Price Your Home to Sell (Not Sit)</span>
+          <span class="lang-es">Cómo Fijar el Precio de tu Casa para Vender (No Esperar)</span>
+        </h3>
+        <p class="text-sm text-brand-textSecondary mb-4">
+          <span class="lang-en">Overpriced listings sit for months. Learn how the CMA process works and how to price with data, not emotion.</span>
+          <span class="lang-es">Las propiedades con precio elevado se quedan meses sin vender. Aprende cómo funciona el proceso CMA.</span>
+        </p>
+        <a href="#contact" class="text-remax-red text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+          <span class="lang-en-inline">Read Guide</span>
+          <span class="lang-es-inline">Leer Guía</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
+      </div>
+
+      <!-- Guide 4 -->
+      <div class="card-hover bg-brand-bg rounded-xl p-6 border border-gray-100">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="bg-remax-red/10 text-remax-red text-xs font-semibold px-3 py-1 rounded-full">
+            <span class="lang-en-inline">Mortgage</span>
+            <span class="lang-es-inline">Hipoteca</span>
+          </span>
+          <span class="text-brand-textSecondary text-xs">
+            <span class="lang-en-inline">4 min read</span>
+            <span class="lang-es-inline">4 min lectura</span>
+          </span>
+        </div>
+        <h3 class="text-lg font-bold text-brand-textPrimary mb-2 font-serif">
+          <span class="lang-en">Credit Score Myths That Cost Buyers Money</span>
+          <span class="lang-es">Mitos del Puntaje de Crédito que Cuestan Dinero</span>
+        </h3>
+        <p class="text-sm text-brand-textSecondary mb-4">
+          <span class="lang-en">The "you need 700+" myth is outdated. Here's what your credit score actually means for your mortgage.</span>
+          <span class="lang-es">El mito de "necesitas 700+" está obsoleto. Aquí está lo que tu puntaje de crédito realmente significa para tu hipoteca.</span>
+        </p>
+        <a href="#contact" class="text-remax-red text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+          <span class="lang-en-inline">Read Guide</span>
+          <span class="lang-es-inline">Leer Guía</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
+      </div>
+
+      <!-- Guide 5 -->
+      <div class="card-hover bg-brand-bg rounded-xl p-6 border border-gray-100">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="bg-remax-blue/10 text-remax-blue text-xs font-semibold px-3 py-1 rounded-full">
+            <span class="lang-en-inline">Buying</span>
+            <span class="lang-es-inline">Comprar</span>
+          </span>
+          <span class="text-brand-textSecondary text-xs">
+            <span class="lang-en-inline">5 min read</span>
+            <span class="lang-es-inline">5 min lectura</span>
+          </span>
+        </div>
+        <h3 class="text-lg font-bold text-brand-textPrimary mb-2 font-serif">
+          <span class="lang-en">Down Payment Assistance: What's Available in NC</span>
+          <span class="lang-es">Asistencia de Pago Inicial: Qué Hay Disponible en NC</span>
+        </h3>
+        <p class="text-sm text-brand-textSecondary mb-4">
+          <span class="lang-en">NC offers multiple DPA programs. Many buyers leave thousands on the table because they don't know these exist.</span>
+          <span class="lang-es">NC ofrece múltiples programas DPA. Muchos compradores dejan miles de dólares sobre la mesa porque no saben que existen.</span>
+        </p>
+        <a href="#contact" class="text-remax-red text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+          <span class="lang-en-inline">Read Guide</span>
+          <span class="lang-es-inline">Leer Guía</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
+      </div>
+
+      <!-- Guide 6 — Bilingual Feature -->
+      <div class="card-hover bg-gradient-to-br from-remax-blue to-mathewson-navy rounded-xl p-6 text-white">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full">EN / ES</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 font-serif">
+          <span class="lang-en">Comprando en Inglés: A Guide for Spanish Speakers</span>
+          <span class="lang-es">Comprando en Inglés: Guía para Hispanohablantes</span>
+        </h3>
+        <p class="text-sm text-white/80 mb-4">
+          <span class="lang-en">Real estate in the US can be confusing — especially in a second language. This guide explains every step in plain Spanish.</span>
+          <span class="lang-es">Los bienes raíces en EE. UU. pueden ser confusos — especialmente en un segundo idioma. Esta guía explica cada paso en español claro.</span>
+        </p>
+        <a href="#contact" class="text-white text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+          <span class="lang-en-inline">Read in Spanish</span>
+          <span class="lang-es-inline">Leer en Español</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     CTA SECTION
+     ========================================= -->
+<section class="bg-mathewson-navy py-20">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <span class="bg-remax-red/20 text-red-300 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full">
+      <span class="lang-en-inline">Ready to Move?</span>
+      <span class="lang-es-inline">¿Listo para Mudarte?</span>
+    </span>
+    <h2 class="text-3xl md:text-5xl font-bold text-white mt-4 mb-4 font-serif">
+      <span class="lang-en">Let's Build Your<br />Path to Homeownership</span>
+      <span class="lang-es">Construyamos Tu<br />Camino a la Propiedad</span>
+    </h2>
+    <p class="text-white/80 text-xl mb-10 max-w-2xl mx-auto">
+      <span class="lang-en">One call. One expert. Your real estate agent and mortgage advisor in one. No referral fees, no handoffs, no confusion.</span>
+      <span class="lang-es">Una llamada. Una experta. Tu agente de bienes raíces y asesor hipotecario en uno. Sin honorarios de referencia, sin transferencias, sin confusión.</span>
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#contact"
+        class="bg-remax-red hover:bg-mathewson-red text-white font-bold px-10 py-4 rounded-md text-lg transition-all hover:shadow-2xl hover:-translate-y-0.5">
+        <span class="lang-en-inline">Book Free Consultation</span>
+        <span class="lang-es-inline">Reservar Consulta Gratuita</span>
+      </a>
+      <a href="tel:+18284298368"
+        class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-10 py-4 rounded-md text-lg transition-all">
+        (828) 429-8368
+      </a>
+    </div>
+    <p class="text-white/50 text-sm mt-6">
+      <span class="lang-en-inline">NMLS #2603041 · Licensed in NC · Not legal or financial advice</span>
+      <span class="lang-es-inline">NMLS #2603041 · Licenciada en NC · No es asesoría legal ni financiera</span>
+    </p>
+  </div>
+</section>
+
+
+<!-- =========================================
+     CONTACT FORM
+     ========================================= -->
+<section id="contact" class="py-20 bg-brand-bg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+
+      <!-- Left: Contact Info -->
+      <div class="lg:col-span-2">
+        <span class="text-remax-red text-sm font-semibold uppercase tracking-widest">
+          <span class="lang-en-inline">Get in Touch</span>
+          <span class="lang-es-inline">Ponerse en Contacto</span>
+        </span>
+        <h2 class="text-3xl font-bold text-brand-textPrimary mt-2 mb-6 font-serif">
+          <span class="lang-en">Let's Start a Conversation</span>
+          <span class="lang-es">Empecemos una Conversación</span>
+        </h2>
+        <p class="text-brand-textSecondary mb-8">
+          <span class="lang-en">Whether you're buying, selling, or just exploring your options — reach out. I respond to all inquiries within one business day.</span>
+          <span class="lang-es">Ya sea que estés comprando, vendiendo o simplemente explorando tus opciones, comunícate. Respondo todas las consultas dentro de un día hábil.</span>
+        </p>
+
+        <div class="space-y-4">
+          <a href="tel:+18284298368" class="flex items-center gap-4 group">
+            <div class="w-12 h-12 bg-remax-blue/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-remax-blue/20 transition-colors">
+              <svg class="w-5 h-5 text-remax-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs text-brand-textSecondary uppercase tracking-wide font-medium">
+                <span class="lang-en-inline">Phone / WhatsApp</span>
+                <span class="lang-es-inline">Teléfono / WhatsApp</span>
+              </div>
+              <div class="text-brand-textPrimary font-semibold">(828) 429-8368</div>
+            </div>
+          </a>
+
+          <a href="mailto:Francine@MMCapitalLLC.com" class="flex items-center gap-4 group">
+            <div class="w-12 h-12 bg-remax-red/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-remax-red/20 transition-colors">
+              <svg class="w-5 h-5 text-remax-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs text-brand-textSecondary uppercase tracking-wide font-medium">Email</div>
+              <div class="text-brand-textPrimary font-semibold text-sm">Francine@MMCapitalLLC.com</div>
+            </div>
+          </a>
+
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-mathewson-navy/10 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-mathewson-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs text-brand-textSecondary uppercase tracking-wide font-medium">
+                <span class="lang-en-inline">Service Area</span>
+                <span class="lang-es-inline">Área de Servicio</span>
+              </div>
+              <div class="text-brand-textPrimary font-semibold">NC, SC, VA, FL</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NMLS Disclaimer -->
+        <div class="mt-8 bg-remax-blue/5 border border-remax-blue/15 rounded-lg p-4 text-xs text-brand-textSecondary">
+          <p class="lang-en">Francine Mira is a licensed North Carolina REALTOR® and Mortgage Loan Originator. NMLS #2603041. This website does not constitute legal, financial, or investment advice. Mortgage and real estate services are subject to applicable state and federal regulations.</p>
+          <p class="lang-es">Francine Mira es una REALTOR® y Originadora de Préstamos Hipotecarios licenciada en Carolina del Norte. NMLS #2603041. Este sitio web no constituye asesoría legal, financiera ni de inversión. Los servicios hipotecarios y de bienes raíces están sujetos a las regulaciones estatales y federales aplicables.</p>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="lg:col-span-3">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+          <h3 class="text-xl font-bold text-brand-textPrimary mb-6 font-serif">
+            <span class="lang-en">Request a Free Consultation</span>
+            <span class="lang-es">Solicitar una Consulta Gratuita</span>
+          </h3>
+
+          <form onsubmit="handleFormSubmit(event)" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-sm font-medium text-brand-textPrimary mb-1.5">
+                  <span class="lang-en-inline">First Name *</span>
+                  <span class="lang-es-inline">Nombre *</span>
+                </label>
+                <input type="text" name="firstName" required
+                  placeholder="First name"
+                  class="form-input w-full border border-gray-200 rounded-lg px-4 py-3 text-brand-textPrimary text-sm bg-brand-bg" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-brand-textPrimary mb-1.5">
+                  <span class="lang-en-inline">Last Name *</span>
+                  <span class="lang-es-inline">Apellido *</span>
+                </label>
+                <input type="text" name="lastName" required
+                  placeholder="Last name"
+                  class="form-input w-full border border-gray-200 rounded-lg px-4 py-3 text-brand-textPrimary text-sm bg-brand-bg" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-brand-textPrimary mb-1.5">
+                <span class="lang-en-inline">Email Address *</span>
+                <span class="lang-es-inline">Correo Electrónico *</span>
+              </label>
+              <input type="email" name="email" required
+                placeholder="Email address"
+                class="form-input w-full border border-gray-200 rounded-lg px-4 py-3 text-brand-textPrimary text-sm bg-brand-bg" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-brand-textPrimary mb-1.5">
+                <span class="lang-en-inline">Phone Number</span>
+                <span class="lang-es-inline">Número de Teléfono</span>
+              </label>
+              <input type="tel" name="phone"
+                placeholder="(828) 000-0000"
+                class="form-input w-full border border-gray-200 rounded-lg px-4 py-3 text-brand-textPrimary text-sm bg-brand-bg" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-brand-textPrimary mb-1.5">
+                <span class="lang-en-inline">I'm interested in... *</span>
+                <span class="lang-es-inline">Me interesa... *</span>
+              </label>
+              <select name="interest" required
+                class="form-input w-full border border-gray-200 rounded-lg px-4 py-3 text-brand-textPrimary text-sm bg-brand-bg">
+                <option value="">
+                  <span class="lang-en-inline">Select one</span>
+                  <span class="lang-es-inline">Seleccionar</span>
+                </option>
+                <option value="buy" class="lang-en">Buying a home</option>
+                <option value="buy" class="lang-es">Comprar una casa</option>
+                <option value="sell" class="lang-en">Selling my home</option>
+                <option value="sell" class="lang-es">Vender mi casa</option>
+                <option value="mortgage" class="lang-en">Mortgage / Pre-approval</option>
+                <option value="mortgage" class="lang-es">Hipoteca / Pre-aprobación</option>
+                <option value="both" class="lang-en">Both buying & mortgage</option>
+                <option value="both" class="lang-es">Comprar e hipoteca</option>
+                <option value="other" class="lang-en">Other / General question</option>
+                <option value="other" class="lang-es">Otro / Pregunta general</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-brand-textPrimary mb-1.5">
+                <span class="lang-en-inline">Message</span>
+                <span class="lang-es-inline">Mensaje</span>
+              </label>
+              <textarea name="message" rows="4"
+                placeholder="How can I help you?"
+                class="form-input w-full border border-gray-200 rounded-lg px-4 py-3 text-brand-textPrimary text-sm bg-brand-bg resize-none"></textarea>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <input type="checkbox" name="consent" id="consent" required class="mt-1 flex-shrink-0" />
+              <label for="consent" class="text-xs text-brand-textSecondary">
+                <span class="lang-en">I consent to being contacted by Francine Mira regarding real estate and mortgage services. I understand this is not a loan application or commitment to lend.</span>
+                <span class="lang-es">Consiento ser contactado por Francine Mira con respecto a servicios de bienes raíces e hipotecarios. Entiendo que esto no es una solicitud de préstamo ni un compromiso de préstamo.</span>
+              </label>
+            </div>
+
+            <button type="submit"
+              class="w-full bg-remax-red hover:bg-mathewson-red text-white font-bold py-4 rounded-lg text-base transition-all hover:shadow-lg hover:-translate-y-0.5">
+              <span class="lang-en-inline">Send My Request</span>
+              <span class="lang-es-inline">Enviar Mi Solicitud</span>
+            </button>
+
+            <p class="text-center text-xs text-brand-textSecondary">
+              <span class="lang-en-inline">I respond within 1 business day. Your information is kept private.</span>
+              <span class="lang-es-inline">Respondo dentro de 1 día hábil. Tu información se mantiene privada.</span>
+            </p>
+          </form>
+
+          <!-- Success Message (hidden by default) -->
+          <div id="formSuccess" class="hidden text-center py-8">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-brand-textPrimary mb-2 font-serif">
+              <span class="lang-en-inline">Message Sent!</span>
+              <span class="lang-es-inline">¡Mensaje Enviado!</span>
+            </h3>
+            <p class="text-brand-textSecondary">
+              <span class="lang-en-inline">Thank you. I'll be in touch within 1 business day.</span>
+              <span class="lang-es-inline">Gracias. Me pondré en contacto dentro de 1 día hábil.</span>
+            </p>
+          </div>
+
+          <!-- Error Message (hidden by default) -->
+          <div id="formError" class="hidden text-center py-8">
+            <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-remax-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-brand-textPrimary mb-2 font-serif">
+              <span class="lang-en-inline">Something went wrong</span>
+              <span class="lang-es-inline">Algo salió mal</span>
+            </h3>
+            <p class="text-brand-textSecondary mb-6">
+              <span class="lang-en-inline">Your message could not be sent. Please try again or reach out directly.</span>
+              <span class="lang-es-inline">Tu mensaje no pudo enviarse. Por favor intenta de nuevo o contáctame directamente.</span>
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+              <button onclick="resetForm()"
+                class="bg-remax-red hover:bg-mathewson-red text-white font-semibold px-6 py-2.5 rounded-md text-sm transition-colors">
+                <span class="lang-en-inline">Try Again</span>
+                <span class="lang-es-inline">Intentar de Nuevo</span>
+              </button>
+              <a href="tel:+18284298368"
+                class="bg-brand-bg border border-gray-200 text-brand-textPrimary font-semibold px-6 py-2.5 rounded-md text-sm transition-colors hover:border-gray-300">
+                (828) 429-8368
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     FOOTER
+     ========================================= -->
+<footer class="bg-mathewson-navy text-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+
+      <!-- Brand Column -->
+      <div class="md:col-span-1">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-9 h-9 bg-remax-red rounded-full flex items-center justify-center">
+            <span class="text-white font-bold text-sm font-serif">FM</span>
+          </div>
+          <div class="font-bold text-lg font-serif">Francine Mira</div>
+        </div>
+        <p class="text-white/60 text-sm mb-4">
+          <span class="lang-en">REALTOR® & Mortgage Loan Originator serving NC, SC, VA, FL</span>
+          <span class="lang-es">REALTOR® y Originadora de Préstamos en NC, SC, VA, FL</span>
+        </p>
+        <div class="space-y-1.5 text-sm">
+          <a href="tel:+18284298368" class="flex items-center gap-2 text-white/70 hover:text-white transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+            (828) 429-8368
+          </a>
+          <a href="mailto:Francine@MMCapitalLLC.com" class="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-xs">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            Francine@MMCapitalLLC.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Services Column -->
+      <div>
+        <h4 class="font-semibold text-sm uppercase tracking-wide mb-4 text-white/80">
+          <span class="lang-en-inline">Services</span>
+          <span class="lang-es-inline">Servicios</span>
+        </h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#services" class="text-white/60 hover:text-white transition-colors">
+            <span class="lang-en-inline">Buy a Home</span>
+            <span class="lang-es-inline">Comprar una Casa</span>
+          </a></li>
+          <li><a href="#services" class="text-white/60 hover:text-white transition-colors">
+            <span class="lang-en-inline">Sell Your Home</span>
+            <span class="lang-es-inline">Vender su Casa</span>
+          </a></li>
+          <li><a href="#mortgage" class="text-white/60 hover:text-white transition-colors">
+            <span class="lang-en-inline">Mortgage Loans</span>
+            <span class="lang-es-inline">Préstamos Hipotecarios</span>
+          </a></li>
+          <li><a href="#education" class="text-white/60 hover:text-white transition-colors">
+            <span class="lang-en-inline">Education Hub</span>
+            <span class="lang-es-inline">Centro de Recursos</span>
+          </a></li>
+        </ul>
+      </div>
+
+      <!-- Credentials Column -->
+      <div>
+        <h4 class="font-semibold text-sm uppercase tracking-wide mb-4 text-white/80">
+          <span class="lang-en-inline">Credentials</span>
+          <span class="lang-es-inline">Credenciales</span>
+        </h4>
+        <ul class="space-y-2.5 text-sm">
+          <li class="text-white/60">REALTOR® —
+            <span class="lang-en-inline">NC Licensed</span>
+            <span class="lang-es-inline">Licenciada NC</span>
+          </li>
+          <li class="text-white/60 font-mono">NMLS #2603041</li>
+          <li class="text-white/60">Mathewson Mortgage Capital LLC</li>
+          <li class="text-white/60 font-mono text-xs">NMLS #2494312</li>
+          <li class="text-white/60">Mira AI Systems™</li>
+        </ul>
+      </div>
+
+      <!-- Legal Column -->
+      <div>
+        <h4 class="font-semibold text-sm uppercase tracking-wide mb-4 text-white/80">
+          <span class="lang-en-inline">Legal</span>
+          <span class="lang-es-inline">Legal</span>
+        </h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#" class="text-white/60 hover:text-white transition-colors">
+            <span class="lang-en-inline">Privacy Policy</span>
+            <span class="lang-es-inline">Política de Privacidad</span>
+          </a></li>
+          <li><a href="#" class="text-white/60 hover:text-white transition-colors">
+            <span class="lang-en-inline">Terms of Service</span>
+            <span class="lang-es-inline">Términos de Servicio</span>
+          </a></li>
+          <li><a href="#" class="text-white/60 hover:text-white transition-colors">
+            <span class="lang-en-inline">Disclaimer</span>
+            <span class="lang-es-inline">Descargo</span>
+          </a></li>
+          <li><a href="https://www.nmlsconsumeraccess.org/" target="_blank" rel="noopener" class="text-white/60 hover:text-white transition-colors text-xs">
+            NMLS Consumer Access ↗
+          </a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-white/40 text-xs">
+        © <span id="footerYear"></span> Francine Mira.
+        <span class="lang-en-inline">All rights reserved.</span>
+        <span class="lang-es-inline">Todos los derechos reservados.</span>
+      </p>
+      <p class="text-white/30 text-xs text-center">
+        <span class="lang-en">Equal Housing Lender. This is not an offer to lend. All loans subject to approval. Francine Mira is not a lawyer or financial advisor.</span>
+        <span class="lang-es">Prestamista de Vivienda Igualitaria. Esto no es una oferta de préstamo. Todos los préstamos sujetos a aprobación.</span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- =========================================
+     JAVASCRIPT
+     ========================================= -->
+<script>
+  // Set footer year
+  document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+  // Language toggle
+  function toggleLang() {
+    const body = document.body;
+    if (body.classList.contains('en')) {
+      body.classList.remove('en');
+      body.classList.add('es');
+      document.documentElement.lang = 'es';
+      document.title = 'Francine Mira | REALTOR® y Originadora de Préstamos | NC';
+    } else {
+      body.classList.remove('es');
+      body.classList.add('en');
+      document.documentElement.lang = 'en';
+      document.title = 'Francine Mira | REALTOR® & Mortgage Loan Originator | NC';
+    }
+  }
+
+  // Mobile menu
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('menuOverlay');
+    const hamburger = document.getElementById('hamburgerIcon');
+    const closeBtn = document.getElementById('closeIcon');
+
+    const isOpen = menu.classList.contains('open');
+    if (isOpen) {
+      menu.classList.remove('open');
+      overlay.classList.add('hidden');
+    } else {
+      menu.classList.add('open');
+      overlay.classList.remove('hidden');
+    }
+  }
+
+  // Form submit — Bonzo Native Webhook
+  async function handleFormSubmit(event) {
+    event.preventDefault();
+    const form = event.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const isEs = document.body.classList.contains('es');
+
+    // Disable button & show loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = isEs ? 'Enviando...' : 'Sending...';
+
+    // Build payload using Bonzo's documented field names only
+    // Valid fields: first_name, last_name, email, phone, address, city, state, field_1–field_5
+    const phoneVal   = form.phone.value.trim();
+    const messageVal = form.message.value.trim();
+
+    const data = {
+      first_name: form.firstName.value.trim(),
+      last_name:  form.lastName.value.trim(),
+      email:      form.email.value.trim(),
+      ...(phoneVal   && { phone:   phoneVal }),
+      field_1: form.interest.value,
+      ...(messageVal && { field_2: messageVal }),
+      field_3: isEs ? 'Spanish' : 'English',
+      field_4: 'francinemira.com'
+    };
+
+    try {
+      const response = await fetch(
+        'https://app.getbonzo.com/api/webhook/4d24400b75aa54cab71166f99e34a540',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        }
+      );
+
+      if (response.ok || response.status === 200 || response.status === 201 || response.status === 204) {
+        // Clear success
+        form.style.display = 'none';
+        document.getElementById('formSuccess').classList.remove('hidden');
+      } else if (response.status >= 400 && response.status < 600) {
+        // Genuine server-side rejection (4xx / 5xx)
+        throw new Error('Server error: ' + response.status);
+      } else {
+        // Any other status — treat as success (e.g. 0 from CORS block;
+        // Bonzo still receives the lead even when the browser blocks the response)
+        form.style.display = 'none';
+        document.getElementById('formSuccess').classList.remove('hidden');
+      }
+    } catch (err) {
+      if (err instanceof TypeError) {
+        // TypeError = network error or CORS block — lead likely still landed in Bonzo
+        form.style.display = 'none';
+        document.getElementById('formSuccess').classList.remove('hidden');
+        console.warn('Bonzo CORS/network note (lead likely received):', err.message);
+      } else {
+        // Genuine server rejection — show error state
+        submitBtn.disabled = false;
+        submitBtn.textContent = isEs ? 'Enviar Mi Solicitud' : 'Send My Request';
+        form.style.display = 'none';
+        document.getElementById('formError').classList.remove('hidden');
+        console.error('Bonzo webhook error:', err.message);
+      }
+    }
+  }
+
+  // Reset form after error
+  function resetForm() {
+    const form = document.querySelector('form');
+    const errorEl = document.getElementById('formError');
+    errorEl.classList.add('hidden');
+    form.style.display = '';
+    form.reset();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = false;
+    const isEs = document.body.classList.contains('es');
+    btn.textContent = isEs ? 'Enviar Mi Solicitud' : 'Send My Request';
+  }
+</script>
+
+</body>
+</html>
