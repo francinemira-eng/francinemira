@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Francine Mira Blog | Homebuying and Mortgage Education</title>
+  <meta name="description" content="Educational mortgage and homebuying blog by Francine Mira, serving Rutherford County, NC and surrounding areas." />
+  <link rel="canonical" href="https://francinemira.com/blog" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="topbar">
+        <div>
+          <h1 class="brand">Francine Mira Blog</h1>
+          <p class="tagline">Mortgage and homebuying education for Rutherford County, NC</p>
+        </div>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/blog/">Blog</a>
+          <a href="https://francinemira.com">Main Website</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Clear mortgage guidance for buyers in Rutherford County, NC</h2>
+        <p>
+          Educational articles on financing, pre-approval, credit, closing costs,
+          and buying a home in Forest City, Rutherfordton, Spindale, Lake Lure, and nearby areas.
+        </p>
+        <a class="button" href="/blog/">Read the Blog</a>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h3>Featured Article</h3>
+      <article class="card">
+        <h4>
+          <a href="/blog/how-to-buy-a-home-in-rutherford-county-nc.html">
+            How to Buy a Home in Rutherford County, NC (Step-by-Step Guide)
+          </a>
+        </h4>
+        <p>
+          A practical guide to pre-approval, budgeting, septic and well considerations,
+          due diligence, underwriting, and closing.
+        </p>
+      </article>
+    </section>
+
+    <section class="container section">
+      <h3>About This Blog</h3>
+      <p>
+        This blog is designed to help buyers understand mortgage and financing concepts in a clear,
+        conservative, and practical way. Content is educational and not a commitment to lend.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>Francine Mira</strong></p>
+      <p>Mortgage Loan Originator | NMLS #2603041</p>
+      <p>Mathewson Mortgage Capital LLC</p>
+      <p>Email: francine@mmcapitalllc.com | Phone: 828-429-8368</p>
+      <p class="disclaimer">
+        This content is for educational purposes only. Loan approval and terms depend on borrower qualifications,
+        credit, property eligibility, and underwriting guidelines.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
