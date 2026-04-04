@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knowledge Center | Free Resources for Home Buyers & Sellers | Francine Mira</title>
+  <meta name="description" content="Free educational resources for home buyers and sellers in North Carolina. Learn about loan types, the buying process, and selling strategies from licensed REALTOR® and MLO Francine Mira." />
+  <style>
+    :root {
+      --navy:   #0D1B2A;
+      --gold:   #C49A3C;
+      --gold-lt:#E8C06A;
+      --slate:  #2C3E50;
+      --light:  #F7F5F0;
+      --white:  #FFFFFF;
+      --gray:   #6B7280;
+      --border: #E5E1D8;
+      --red:    #B91C1C;
+      --font-head: 'Georgia', 'Times New Roman', serif;
+      --font-body: 'Segoe UI', Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--light);
+      color: var(--navy);
+      line-height: 1.7;
+    }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--navy);
+      color: var(--gold-lt);
+      text-align: center;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      padding: 8px 20px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--white);
+      border-bottom: 3px solid var(--gold);
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .nav-logo {
+      font-family: var(--font-head);
+      font-size: 1.3rem;
+      color: var(--navy);
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--navy);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a.active { color: var(--gold); border-bottom: 2px solid var(--gold); padding-bottom: 2px; }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 9px 20px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--gold-lt); }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--slate) 100%);
+      color: var(--white);
+      padding: 72px 40px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -40px; left: -40px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(196,154,60,0.08);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; right: -40px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: rgba(196,154,60,0.06);
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(196,154,60,0.2);
+      border: 1px solid var(--gold);
+      color: var(--gold-lt);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: 2.8rem;
+      font-weight: bold;
+      max-width: 700px;
+      margin: 0 auto 16px;
+      line-height: 1.2;
+    }
+    .hero h1 span { color: var(--gold-lt); }
+    .hero p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 580px;
+      margin: 0 auto 32px;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat strong {
+      display: block;
+      font-size: 2rem;
+      color: var(--gold-lt);
+      font-family: var(--font-head);
+    }
+    .hero-stat span { font-size: 0.8rem; color: rgba(255,255,255,0.7); letter-spacing: 0.06em; text-transform: uppercase; }
+
+    /* ── SECTION STRUCTURE ── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 64px 0; }
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .section-sub {
+      color: var(--gray);
+      font-size: 0.95rem;
+      max-width: 560px;
+      margin-bottom: 40px;
+    }
+    .divider {
+      width: 48px;
+      height: 3px;
+      background: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    /* ── FEATURED ARTICLE ── */
+    .featured-section { background: var(--white); }
+    .featured-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .featured-content { }
+    .featured-tag {
+      display: inline-block;
+      background: #FEF3C7;
+      color: #92400E;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .featured-content h2 {
+      font-family: var(--font-head);
+      font-size: 1.9rem;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+    .featured-content p {
+      color: var(--gray);
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+    .featured-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--gray);
+      margin-bottom: 24px;
+    }
+    .featured-meta span::before { content: '·'; margin-right: 16px; }
+    .featured-meta span:first-child::before { content: ''; margin-right: 0; }
+    .btn-primary {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      padding: 12px 28px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary:hover { background: var(--slate); }
+    .btn-gold {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 12px 28px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-gold:hover { background: var(--gold-lt); }
+    .featured-visual {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a3a5c 100%);
+      border-radius: 8px;
+      padding: 40px 36px;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .featured-visual::before {
+      content: '⚠';
+      position: absolute;
+      font-size: 8rem;
+      opacity: 0.05;
+      top: -10px; right: -10px;
+    }
+    .featured-visual h3 {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      color: var(--gold-lt);
+      margin-bottom: 20px;
+      letter-spacing: 0.04em;
+    }
+    .trap-list { list-style: none; }
+    .trap-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.5;
+    }
+    .trap-list li .icon {
+      min-width: 20px;
+      color: var(--gold-lt);
+      font-size: 0.9rem;
+      margin-top: 2px;
+    }
+
+    /* ── ARTICLE CARDS ── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .card {
+      background: var(--white);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.1); transform: translateY(-2px); }
+    .card-header {
+      padding: 20px 24px 0;
+    }
+    .card-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .tag-loan { background: #FEF3C7; color: #92400E; }
+    .tag-buy  { background: #DCFCE7; color: #166534; }
+    .tag-sell { background: #EDE9FE; color: #5B21B6; }
+    .card h3 {
+      font-family: var(--font-head);
+      font-size: 1.05rem;
+      color: var(--navy);
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .card p {
+      padding: 0 24px;
+      color: var(--gray);
+      font-size: 0.87rem;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+    .card-footer {
+      padding: 14px 24px 20px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .read-time { font-size: 0.75rem; color: var(--gray); }
+    .btn-link {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .btn-link:hover { color: var(--navy); }
+
+    /* ── CATEGORY TABS ── */
+    .cat-section { background: var(--light); }
+    .cat-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 36px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0;
+    }
+    .cat-tab {
+      padding: 10px 22px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: var(--gray);
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      transition: color 0.2s;
+      text-transform: uppercase;
+    }
+    .cat-tab.active { color: var(--navy); border-bottom-color: var(--gold); }
+    .cat-tab:hover:not(.active) { color: var(--navy); }
+    .cat-panel { display: none; }
+    .cat-panel.active { display: block; }
+
+    /* ── DOWNLOAD CTA BANNER ── */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a3a5c 100%);
+      color: var(--white);
+      padding: 64px 40px;
+      text-align: center;
+    }
+    .cta-banner h2 {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+    .cta-banner h2 span { color: var(--gold-lt); }
+    .cta-banner p {
+      color: rgba(255,255,255,0.75);
+      max-width: 520px;
+      margin: 0 auto 32px;
+      font-size: 0.95rem;
+    }
+    .cta-form {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .cta-form input {
+      flex: 1;
+      min-width: 220px;
+      padding: 12px 18px;
+      border-radius: 4px;
+      border: none;
+      font-size: 0.9rem;
+      font-family: var(--font-body);
+    }
+    .cta-form button {
+      padding: 12px 28px;
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .cta-form button:hover { background: var(--gold-lt); }
+    .cta-note { font-size: 0.73rem; color: rgba(255,255,255,0.5); margin-top: 12px; }
+
+    /* ── GUIDE CARDS ── */
+    .guides-section { background: var(--white); }
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .guide-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 28px 24px;
+      text-align: center;
+      transition: box-shadow 0.2s;
+    }
+    .guide-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.09); }
+    .guide-icon {
+      width: 56px; height: 56px;
+      background: var(--light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin: 0 auto 16px;
+      border: 2px solid var(--border);
+    }
+    .guide-card h3 {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .guide-card p {
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin-bottom: 20px;
+    }
+
+    /* ── ARTICLE MODAL ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 999;
+      overflow-y: auto;
+      padding: 40px 20px;
+    }
+    .modal-overlay.open { display: flex; align-items: flex-start; justify-content: center; }
+    .modal {
+      background: var(--white);
+      border-radius: 10px;
+      max-width: 760px;
+      width: 100%;
+      padding: 48px 52px;
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 18px; right: 22px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--gray);
+      line-height: 1;
+    }
+    .modal-close:hover { color: var(--navy); }
+    .modal-tag {
+      display: inline-block;
+      background: #FEF3C7;
+      color: #92400E;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .modal h1 {
+      font-family: var(--font-head);
+      font-size: 1.9rem;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+    .modal-meta {
+      font-size: 0.8rem;
+      color: var(--gray);
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .modal-body h2 {
+      font-family: var(--font-head);
+      font-size: 1.25rem;
+      color: var(--navy);
+      margin: 28px 0 10px;
+    }
+    .modal-body p {
+      font-size: 0.93rem;
+      color: #374151;
+      margin-bottom: 14px;
+      line-height: 1.75;
+    }
+    .modal-body ul, .modal-body ol {
+      padding-left: 22px;
+      margin-bottom: 16px;
+    }
+    .modal-body li {
+      font-size: 0.93rem;
+      color: #374151;
+      margin-bottom: 8px;
+      line-height: 1.65;
+    }
+    .callout {
+      background: #FFF7ED;
+      border-left: 4px solid var(--gold);
+      padding: 16px 20px;
+      border-radius: 0 6px 6px 0;
+      margin: 20px 0;
+    }
+    .callout strong { color: var(--navy); display: block; margin-bottom: 4px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .callout p { font-size: 0.9rem; color: #6B4C0A; margin: 0; }
+    .warning-box {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      border-left: 4px solid var(--red);
+      padding: 16px 20px;
+      border-radius: 0 6px 6px 0;
+      margin: 20px 0;
+    }
+    .warning-box strong { color: var(--red); display: block; margin-bottom: 4px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .warning-box p { font-size: 0.9rem; color: #7F1D1D; margin: 0; }
+    .disclaimer {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 36px;
+      font-size: 0.78rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+    .modal-cta-box {
+      background: var(--navy);
+      border-radius: 8px;
+      padding: 28px;
+      text-align: center;
+      margin-top: 32px;
+    }
+    .modal-cta-box p { color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-bottom: 16px; }
+    .modal-cta-box strong { color: var(--white); display: block; font-family: var(--font-head); font-size: 1.1rem; margin-bottom: 8px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.7);
+      padding: 48px 40px 28px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto 36px;
+    }
+    .footer-brand p { font-size: 0.85rem; margin-top: 10px; line-height: 1.6; }
+    .footer-logo {
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      color: var(--white);
+      font-weight: bold;
+    }
+    .footer-logo span { color: var(--gold-lt); }
+    .footer-col h4 { color: var(--white); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.87rem; transition: color 0.2s; cursor: pointer; }
+    .footer-col ul li a:hover { color: var(--gold-lt); }
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.6;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .featured-wrap { grid-template-columns: 1fr; }
+      .card-grid { grid-template-columns: 1fr 1fr; }
+      .guide-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .hero h1 { font-size: 2rem; }
+    }
+    @media (max-width: 620px) {
+      nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+      .card-grid { grid-template-columns: 1fr; }
+      .guide-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .modal { padding: 32px 24px; }
+      .hero-stats { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  Licensed REALTOR® (NC) &nbsp;|&nbsp; NMLS #2603041 &nbsp;|&nbsp; Serving North Carolina Home Buyers & Sellers
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="https://francinemira.com" class="nav-logo">Francine <span>Mira</span></a>
+  <ul class="nav-links">
+    <li><a href="https://francinemira.com">Home</a></li>
+    <li><a href="#" class="active">Knowledge Center</a></li>
+    <li><a href="https://francinemira.com/buy">Buy</a></li>
+    <li><a href="https://francinemira.com/sell">Sell</a></li>
+    <li><a href="https://francinemira.com/about">About</a></li>
+  </ul>
+  <a href="https://francinemira.com/contact" class="nav-cta">Book a Call</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">Free Educational Resources</div>
+  <h1>Knowledge Center<br /><span>For Home Buyers &amp; Sellers</span></h1>
+  <p>No fluff. No sales pitch. Just clear, honest information from a licensed REALTOR® and Mortgage Loan Originator who works in NC every day.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><strong>12+</strong><span>Free Articles</span></div>
+    <div class="hero-stat"><strong>3</strong><span>Free Guides</span></div>
+    <div class="hero-stat"><strong>100%</strong><span>No Cost</span></div>
+  </div>
+</section>
+
+<!-- FEATURED ARTICLE -->
+<section class="featured-section">
+  <div class="container">
+    <div class="divider"></div>
+    <div class="section-label">Featured Article</div>
+    <div class="featured-wrap">
+      <div class="featured-content">
+        <span class="featured-tag">Loan Types &amp; Traps</span>
+        <h2>The USDA Loan Trap: What No One Tells You</h2>
+        <div class="featured-meta">
+          <span>By Francine Mira, REALTOR® | NMLS #2603041</span>
+          <span>8 min read</span>
+        </div>
+        <p>USDA loans promise zero down payment and low interest rates — and for the right buyer, they deliver. But there are critical restrictions, hidden costs, and geographic limitations that most buyers never hear about until it's too late.</p>
+        <p>This article breaks down exactly what USDA loans are, who actually qualifies, and the traps that catch buyers off guard — so you can make an informed decision before you apply.</p>
+        <button class="btn-primary" onclick="openArticle('usda')">Read the Full Article →</button>
+      </div>
+      <div class="featured-visual">
+        <h3>What This Article Covers</h3>
+        <ul class="trap-list">
+          <li><span class="icon">✓</span>What a USDA loan actually is and who it’s really for</li>
+          <li><span class="icon">✓</span>The income limits most buyers don’t know about</li>
+          <li><span class="icon">✓</span>Geographic eligibility — not every “rural” area qualifies</li>
+          <li><span class="icon">✓</span>The guarantee fee — it’s not as “free” as it looks</li>
+          <li><span class="icon">✓</span>Why USDA loans fall through at the last minute</li>
+          <li><span class="icon">✓</span>When USDA is the right choice vs. when to walk away</li>
+          <li><span class="icon">✓</span>NC-specific programs that may work better for you</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TABBED CATEGORIES -->
+<section class="cat-section">
+  <div class="container">
+    <div class="divider"></div>
+    <div class="section-label">Browse by Topic</div>
+    <h2 class="section-title">All Resources</h2>
+    <p class="section-sub">Select a category below to find articles relevant to your situation.</p>
+
+    <div class="cat-tabs">
+      <button class="cat-tab active" onclick="switchTab(event, 'loans')">Loan Types &amp; Traps</button>
+      <button class="cat-tab" onclick="switchTab(event, 'buying')">Buying Process</button>
+      <button class="cat-tab" onclick="switchTab(event, 'selling')">Selling Process</button>
+    </div>
+
+    <!-- LOANS PANEL -->
+    <div class="cat-panel active" id="panel-loans">
+      <div class="card-grid">
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-tag tag-loan">Loan Types &amp; Traps</span>
+            <h3>The USDA Loan Trap: What No One Tells You</h3>
+          </div>
+          <p>Zero down sounds great — until you hit the income caps, geographic limits, and hidden fees. Know before you apply.</p>
+          <div class="card-footer">
+            <span class="read-time">8 min read</span>
+            <button class="btn-link" onclick="openArticle('usda')">Read Article →</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-tag tag-loan">Loan Types &amp; Traps</span>
+            <h3>FHA vs. Conventional: Which Loan Is Actually Right for You?</h3>
+          </div>
+          <p>Most buyers default to FHA without running the numbers. Here’s how to compare total cost, not just down payment.</p>
+          <div class="card-footer">
+            <span class="read-time">6 min read</span>
+            <button class="btn-link" onclick="openArticle('fha')">Read Article →</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-tag tag-loan">Loan Types &amp; Traps</span>
+            <h3>VA Loan Benefits Most Veterans Never Use</h3>
+          </div>
+          <p>If you have a VA entitlement, you may be leaving thousands on the table. This article covers the benefits, limitations, and NC-specific resources.</p>
+          <div class="card-footer">
+            <span class="read-time">5 min read</span>
+            <button class="btn-link" onclick="openArticle('va')">Read Article →</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-tag tag-loan">Loan Types &amp; Traps</span>
+            <h3>The Down Payment Myth: You Don’t Need 20%</h3>
+          </div>
+          <p>The “20% or don’t buy” rule is outdated. Learn the real numbers — and which NC down payment assistance programs can close the gap.</p>
+          <div class="card-footer">
+            <span class="read-time">5 min read</span>
+            <button class="btn-link" onclick="openArticle('downpayment')">Read Article →</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BUYING PANEL -->
+    <div class="cat-panel" id="panel-buying">
+      <div class="card-grid">
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-tag tag-buy">Buying Process</span>
+            <h3>Pre-Approval vs. Pre-Qualification: Know the Difference</h3>
+          </div>
+          <p>One is a starting point. The other is what sellers actually take seriously. If you’re making offers without understanding this difference, you’re already behind.</p>
+          <div class="card-footer">
+            <span class="read-time">4 min read</span>
+            <button class="btn-link" onclick="openArticle('preapproval')">Read Article →</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-tag tag-buy">Buying Process</span>
+            <h3>Your Credit Score Before You Apply: What Lenders Actually Look At</h3>
+          </div>
+          <p>It’s not just your score — it’s your utilization, open accounts, recent inquiries, and more. Understand the full picture before a lender pulls your credit.</p>
+          <div class="card-footer">
+            <span class="read-time">6 min read</span>
+            <button class="btn-link" onclick="openArticle('credit')">Read Article →</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-tag tag-buy">Buying Process</span>
+            <h3>How the Home Buying Process Actually Works: Step by Step</h3>
+          </div>
+          <p>From search to closing — a plain-language walkthrough of every stage, what to expect, and where most buyers get tripped up in NC.</p>
+          <div class="card-footer">
+            <span class="read-time">9 min read</span>
+            <button class="btn-link" onclick="openArticle('buyprocess')">Read Article →</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-tag tag-buy">Buying Process</span>
+            <h3>First-Time Buyer Programs in North Carolina</h3>
+          </div>
+          <p>NC Housing Finance Agency, NCHFA down payment assistance, USDA, and more. A clear breakdown of programs available to eligible NC buyers today.</p>
+          <div class="card-footer">
+            <span class="read-time">7 min read</span>
+            <button class="btn-link" onclick="openArticle('ncprograms')">Read Article →</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SELLING PANEL -->
+    <div class="cat-panel" id="panel-selling">
+      <div class="card-grid">
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-tag tag-sell">Selling Process</span>
+            <h3>What Sellers Actually Pay at Closing in NC</h3>
+          </div>
+          <p>Closing costs, agent fees, transfer taxes, repair credits — the full picture of what comes out of your proceeds before you see a check.</p>
+          <div class="card-footer">
+            <span class="read-time">5 min read</span>
+            <button class="btn-link" onclick="openArticle('sellcosts')">Read Article →</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-tag tag-sell">Selling Process</span>
+            <h3>How to Price Your Home in Today’s Market</h3>
+          </div>
+          <p>Overpricing is the #1 mistake sellers make. Learn how a comparative market analysis works and why the right price from day one beats a price reduction every time.</p>
+          <div class="card-footer">
+            <span class="read-time">6 min read</span>
+            <button class="btn-link" onclick="openArticle('pricing')">Read Article →</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-tag tag-sell">Selling Process</span>
+            <h3>Staging on a Budget: What Actually Moves Buyers</h3>
+          </div>
+          <p>You don’t need a staging company. You need to understand what buyers see when they walk in — and how to use that to your advantage on any budget.</p>
+          <div class="card-footer">
+            <span class="read-time">5 min read</span>
+            <button class="btn-link" onclick="openArticle('staging')">Read Article →</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-tag tag-sell">Selling Process</span>
+            <h3>The Listing Agreement: What You’re Signing</h3>
+          </div>
+          <p>Before you hand over the keys to your listing, understand what the contract binds you to — and what questions to ask before you sign.</p>
+          <div class="card-footer">
+            <span class="read-time">5 min read</span>
+            <button class="btn-link" onclick="openArticle('listing')">Read Article →</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FREE GUIDE DOWNLOAD CTA -->
+<section class="cta-banner">
+  <h2>Get the Free <span>NC Buyer’s Toolkit</span></h2>
+  <p>A plain-language guide covering loan types, the buying process, NC assistance programs, and the questions your agent won’t always volunteer.</p>
+  <div class="cta-form">
+    <input type="email" placeholder="Your email address" />
+    <button type="button">Send My Free Guide</button>
+  </div>
+  <p class="cta-note">No spam. No automated sequences. Just the guide. Unsubscribe anytime.</p>
+</section>
+
+<!-- FREE GUIDE CARDS -->
+<section class="guides-section">
+  <div class="container">
+    <div class="divider"></div>
+    <div class="section-label">Free Downloads</div>
+    <h2 class="section-title">Guides &amp; Checklists</h2>
+    <p class="section-sub">Practical resources you can reference throughout your transaction.</p>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <div class="guide-icon">📄</div>
+        <h3>NC Buyer’s Toolkit</h3>
+        <p>Loan options, assistance programs, step-by-step process, and questions to ask your agent — all in one place.</p>
+        <button class="btn-gold" onclick="document.querySelector('.cta-banner').scrollIntoView({behavior:'smooth'})">Download Free →</button>
+      </div>
+      <div class="guide-card">
+        <div class="guide-icon">🏠</div>
+        <h3>Home Seller’s Closing Cost Calculator</h3>
+        <p>Know your net proceeds before you list. Includes agent fees, transfer tax, prorated taxes, and repair credits.</p>
+        <button class="btn-gold" onclick="document.querySelector('.cta-banner').scrollIntoView({behavior:'smooth'})">Download Free →</button>
+      </div>
+      <div class="guide-card">
+        <div class="guide-icon">✅</div>
+        <h3>Credit Readiness Checklist</h3>
+        <p>What to fix, what to leave alone, and what most buyers do that actually hurts their score before applying.</p>
+        <button class="btn-gold" onclick="document.querySelector('.cta-banner').scrollIntoView({behavior:'smooth'})">Download Free →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">Francine <span>Mira</span></div>
+      <p>Licensed REALTOR® in North Carolina.<br />Mortgage Loan Originator, NMLS #2603041.<br />Founder, Mira AI Systems™</p>
+    </div>
+    <div class="footer-col">
+      <h4>Knowledge Center</h4>
+      <ul>
+        <li><a onclick="switchTabById('loans')">Loan Types &amp; Traps</a></li>
+        <li><a onclick="switchTabById('buying')">Buying Process</a></li>
+        <li><a onclick="switchTabById('selling')">Selling Process</a></li>
+        <li><a onclick="document.querySelector('.cta-banner').scrollIntoView({behavior:'smooth'})">Free Guides</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Work With Francine</h4>
+      <ul>
+        <li><a href="https://francinemira.com/contact">Book a Consultation</a></li>
+        <li><a href="https://francinemira.com/buy">Buy a Home</a></li>
+        <li><a href="https://francinemira.com/sell">Sell Your Home</a></li>
+        <li><a href="https://francinemira.com/about">About Francine</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Francine Mira. All rights reserved. | Mira AI Systems™ is a separate brand and does not constitute legal or financial advice.</p>
+    <p style="margin-top:6px;">This Knowledge Center is for educational purposes only. Content does not constitute legal, financial, or mortgage advice. All loan products are subject to qualification, underwriting approval, and program availability. Programs and rates change frequently; consult a licensed professional for advice specific to your situation. Francine Mira is licensed in North Carolina. NMLS #2603041.</p>
+  </div>
+</footer>
+
+
+<!-- ══════════ ARTICLE MODALS ══════════ -->
+
+<!-- USDA ARTICLE -->
+<div class="modal-overlay" id="modal-usda">
+  <div class="modal">
+    <button class="modal-close" onclick="closeArticle('usda')">&times;</button>
+    <span class="modal-tag">Loan Types &amp; Traps</span>
+    <h1>The USDA Loan Trap: What No One Tells You</h1>
+    <div class="modal-meta">By Francine Mira, REALTOR® &nbsp;|&nbsp; NMLS #2603041 &nbsp;|&nbsp; 8 min read</div>
+    <div class="modal-body">
+
+      <p>If you’ve been searching for ways to buy a home with little to no money down, someone has probably mentioned the USDA loan. Zero down payment. Below-market interest rates. Government-backed. It sounds almost too good to be true.</p>
+      <p>And in some cases, it is. Not because USDA loans are bad products — for the right buyer, they’re excellent. The problem is that most people hear “zero down” and stop listening before they hear the rest.</p>
+
+      <h2>What Is a USDA Loan?</h2>
+      <p>A USDA loan is a mortgage backed by the U.S. Department of Agriculture’s Rural Development program. It was designed to encourage homeownership in rural and some suburban areas by offering favorable terms to low-to-moderate income buyers who might not qualify for conventional financing.</p>
+      <p>There are two main types: the <strong>USDA Guaranteed Loan</strong> (issued by approved private lenders, backed by USDA) and the <strong>USDA Direct Loan</strong> (issued directly by USDA for very low-income buyers). Most buyers encounter the Guaranteed Loan program.</p>
+
+      <h2>The Three Requirements Most Buyers Miss</h2>
+
+      <div class="callout">
+        <strong>Requirement #1: Location</strong>
+        <p>The property must be in a USDA-eligible rural or suburban area. This is not about what you think of as “rural.” USDA uses its own eligibility maps, and areas are re-evaluated periodically. Some communities near major NC metros currently qualify — and can lose eligibility when updated census data is released.</p>
+      </div>
+
+      <div class="callout">
+        <strong>Requirement #2: Income Limits</strong>
+        <p>USDA is a program for low-to-moderate income buyers. There are income caps based on your county and household size. In North Carolina, limits vary by area. For many households in the Triangle, Piedmont Triad, or Charlotte metro — even moderate earners can exceed the limit. Every person living in the household counts toward the income calculation, including adult children and extended family.</p>
+      </div>
+
+      <div class="callout">
+        <strong>Requirement #3: Primary Residence Only</strong>
+        <p>USDA loans are for owner-occupied primary residences. You cannot use a USDA loan to purchase investment property, a vacation home, or a rental. And if you already own adequate housing, you may be disqualified even if you meet all other criteria.</p>
+      </div>
+
+      <h2>The Guarantee Fee: It’s Not Truly “Free”</h2>
+      <p>USDA loans don’t require a traditional down payment, but they do carry a guarantee fee structure that functions similarly to mortgage insurance:</p>
+      <ul>
+        <li><strong>Upfront Guarantee Fee:</strong> Currently 1% of the loan amount, rolled into the loan. On a $250,000 home, that’s $2,500 added to your balance from day one.</li>
+        <li><strong>Annual Fee:</strong> Currently 0.35% of the remaining loan balance per year, paid monthly. This is lower than FHA’s mortgage insurance premium — but it exists for the life of the loan under some conditions.</li>
+      </ul>
+      <p>These fees change periodically. Always confirm current rates with your lender.</p>
+
+      <h2>Why USDA Loans Fall Through at the Last Minute</h2>
+      <p>USDA loans take longer to close than conventional or FHA loans. Why? Because in addition to standard lender underwriting, the file must also be reviewed and approved by USDA itself. This adds time — sometimes weeks. In a competitive market, sellers may be unwilling to accept that uncertainty.</p>
+
+      <div class="warning-box">
+        <strong>Common Closing Delays</strong>
+        <p>Geographic eligibility changes mid-transaction. Income recalculated to include household members the buyer didn’t disclose. Property condition doesn’t meet USDA’s minimum habitability standards (more restrictive than conventional). USDA processing backlog during high-volume periods. Always disclose your full household income and confirm current eligibility maps before going under contract.</p>
+      </div>
+
+      <h2>When USDA Is the Right Choice</h2>
+      <p>USDA loans are a strong option when:</p>
+      <ul>
+        <li>You qualify on income, the property is in an eligible area, and you have limited cash for a down payment</li>
+        <li>You have good credit but limited savings</li>
+        <li>You’re buying in a more suburban or rural NC county where the timeline is less competitive</li>
+        <li>Your household income is genuinely within program limits</li>
+      </ul>
+
+      <h2>When to Consider Alternatives</h2>
+      <p>Consider FHA, conventional with down payment assistance, or NC Housing Finance Agency programs if:</p>
+      <ul>
+        <li>The property is in an urban or ineligible area</li>
+        <li>Your household income exceeds USDA limits even marginally</li>
+        <li>You’re in a competitive market where sellers favor faster-closing loan types</li>
+        <li>The property has condition issues that may not meet USDA standards</li>
+      </ul>
+
+      <h2>NC-Specific Resources Worth Knowing</h2>
+      <p>The <strong>NC Housing Finance Agency (NCHFA)</strong> offers its own down payment assistance programs, including the NC Home Advantage Mortgage, which can be paired with FHA, VA, USDA, or conventional loans. These programs are worth reviewing alongside USDA before deciding on a path.</p>
+      <p>As both a REALTOR® and licensed MLO, I can help you run an apples-to-apples comparison of total cost across loan programs — not just the rate and down payment.</p>
+
+      <div class="modal-cta-box">
+        <strong>Want to Know Which Loan Type Is Right for You?</strong>
+        <p>Let’s look at your numbers together. Book a no-pressure consultation to compare your options side by side.</p>
+        <a href="https://francinemira.com/contact" class="btn-gold">Book a Free Consultation &rarr;</a>
+      </div>
+
+      <div class="disclaimer">
+        <strong>Educational Disclaimer:</strong> This article is provided for informational and educational purposes only. It does not constitute mortgage advice, legal advice, or a commitment to lend. All loan programs are subject to qualification, underwriting approval, program availability, and may change without notice. Income limits, geographic eligibility, and fee structures for USDA programs are subject to change. Contact a licensed mortgage professional for advice specific to your financial situation. Francine Mira, NMLS #2603041, is licensed in North Carolina.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FHA ARTICLE -->
+<div class="modal-overlay" id="modal-fha">
+  <div class="modal">
+    <button class="modal-close" onclick="closeArticle('fha')">&times;</button>
+    <span class="modal-tag">Loan Types &amp; Traps</span>
+    <h1>FHA vs. Conventional: Which Loan Is Actually Right for You?</h1>
+    <div class="modal-meta">By Francine Mira, REALTOR® &nbsp;|&nbsp; NMLS #2603041 &nbsp;|&nbsp; 6 min read</div>
+    <div class="modal-body">
+      <p>Most first-time buyers default to FHA without comparing the full cost. FHA has a lower credit score floor and accepts a smaller down payment &mdash; but it carries mandatory mortgage insurance that you may not be able to remove, making it more expensive over time for many buyers.</p>
+      <h2>The Core Difference</h2>
+      <p><strong>FHA loans</strong> are backed by the Federal Housing Administration. They accept credit scores as low as 580 (with 3.5% down) or 500 (with 10% down). They require both an upfront mortgage insurance premium (1.75% of the loan) and an annual MIP that typically lasts the life of the loan.</p>
+      <p><strong>Conventional loans</strong> are not government-backed. They require higher credit scores (typically 620+) and can require PMI if you put down less than 20% &mdash; but PMI can be canceled once you reach 20% equity. No upfront insurance premium.</p>
+      <h2>Total Cost Is the Real Comparison</h2>
+      <p>If you have a 680+ credit score and can put 5-10% down, conventional often costs less over the life of the loan than FHA, even with PMI &mdash; because conventional PMI rates are lower for stronger credit profiles and can be eliminated. Run the numbers for your specific situation before assuming FHA is the cheaper path.</p>
+      <div class="modal-cta-box">
+        <strong>Want a Side-by-Side Comparison for Your Situation?</strong>
+        <p>As a licensed MLO, I can show you the real numbers across loan types &mdash; not just the rate.</p>
+        <a href="https://francinemira.com/contact" class="btn-gold">Book a Free Consultation &rarr;</a>
+      </div>
+      <div class="disclaimer"><strong>Educational Disclaimer:</strong> For informational purposes only. Not a commitment to lend. Loan programs, rates, and requirements are subject to change. Francine Mira, NMLS #2603041, licensed in North Carolina.</div>
+    </div>
+  </div>
+</div>
+
+<!-- VA ARTICLE -->
+<div class="modal-overlay" id="modal-va">
+  <div class="modal">
+    <button class="modal-close" onclick="closeArticle('va')">&times;</button>
+    <span class="modal-tag">Loan Types &amp; Traps</span>
+    <h1>VA Loan Benefits Most Veterans Never Use</h1>
+    <div class="modal-meta">By Francine Mira, REALTOR® &nbsp;|&nbsp; NMLS #2603041 &nbsp;|&nbsp; 5 min read</div>
+    <div class="modal-body">
+      <p>If you have a VA entitlement, you have access to one of the most powerful home loan programs in existence. No down payment required. No private mortgage insurance. Competitive interest rates. And in many cases, a funding fee that can be rolled into the loan &mdash; or waived entirely for disabled veterans.</p>
+      <h2>What Many Veterans Don&rsquo;t Know</h2>
+      <ul>
+        <li>You can use your VA entitlement more than once</li>
+        <li>Surviving spouses of veterans may qualify</li>
+        <li>The VA funding fee can be waived if you have a service-connected disability rating</li>
+        <li>VA loans have no loan limit if you have full entitlement (post-2020 law change)</li>
+        <li>NC has additional state veteran benefits that may stack with VA loan programs</li>
+      </ul>
+      <h2>Limitations to Know</h2>
+      <p>VA loans require a Certificate of Eligibility (COE), a VA appraisal (which is separate from a home inspection), and the property must meet VA minimum property requirements. Some sellers in competitive markets are hesitant about VA offers due to appraisal requirements &mdash; an experienced agent can help you navigate this.</p>
+      <div class="modal-cta-box">
+        <strong>Are You Using Your Full VA Benefit?</strong>
+        <p>Let&rsquo;s review your eligibility and compare your options as a veteran buyer in NC.</p>
+        <a href="https://francinemira.com/contact" class="btn-gold">Book a Free Consultation &rarr;</a>
+      </div>
+      <div class="disclaimer"><strong>Educational Disclaimer:</strong> For informational purposes only. VA loan benefits and eligibility are subject to VA guidelines. Francine Mira, NMLS #2603041, licensed in North Carolina.</div>
+    </div>
+  </div>
+</div>
+
+<!-- DOWN PAYMENT ARTICLE -->
+<div class="modal-overlay" id="modal-downpayment">
+  <div class="modal">
+    <button class="modal-close" onclick="closeArticle('downpayment')">&times;</button>
+    <span class="modal-tag">Loan Types &amp; Traps</span>
+    <h1>The Down Payment Myth: You Don&rsquo;t Need 20%</h1>
+    <div class="modal-meta">By Francine Mira, REALTOR® &nbsp;|&nbsp; NMLS #2603041 &nbsp;|&nbsp; 5 min read</div>
+    <div class="modal-body">
+      <p>The idea that you need 20% down to buy a home is one of the most persistent myths in real estate &mdash; and it has kept countless qualified buyers on the sidelines for years longer than necessary.</p>
+      <h2>The Real Numbers</h2>
+      <ul>
+        <li><strong>Conventional loans:</strong> as low as 3% down for first-time buyers</li>
+        <li><strong>FHA loans:</strong> 3.5% down with a 580+ credit score</li>
+        <li><strong>USDA loans:</strong> 0% down in eligible areas</li>
+        <li><strong>VA loans:</strong> 0% down for eligible veterans and surviving spouses</li>
+      </ul>
+      <h2>NC Down Payment Assistance</h2>
+      <p>The NC Housing Finance Agency offers programs that can provide up to 5% of the loan amount as down payment assistance &mdash; forgivable after 15 years. These programs are paired with specific loan types and have income and purchase price limits. They are available to both first-time and repeat buyers in many cases.</p>
+      <h2>Why 20% Still Has Value</h2>
+      <p>Putting 20% down eliminates PMI on conventional loans, lowers your monthly payment, and gives you equity cushion from day one. If you can do it without depleting your emergency reserves, it&rsquo;s a strong financial position. But it is not a requirement &mdash; and waiting to save 20% while rents rise and home prices increase may cost you more than the PMI would have.</p>
+      <div class="modal-cta-box">
+        <strong>Want to See What You Can Actually Afford Today?</strong>
+        <p>Let&rsquo;s run your real numbers and find out what programs you qualify for.</p>
+        <a href="https://francinemira.com/contact" class="btn-gold">Book a Free Consultation &rarr;</a>
+      </div>
+      <div class="disclaimer"><strong>Educational Disclaimer:</strong> For informational purposes only. Program availability and eligibility requirements are subject to change. Francine Mira, NMLS #2603041, licensed in North Carolina.</div>
+    </div>
+  </div>
+</div>
+
+<!-- PRE-APPROVAL ARTICLE -->
+<div class="modal-overlay" id="modal-preapproval">
+  <div class="modal">
+    <button class="modal-close" onclick="closeArticle('preapproval')">&times;</button>
+    <span class="modal-tag">Buying Process</span>
+    <h1>Pre-Approval vs. Pre-Qualification: Know the Difference</h1>
+    <div class="modal-meta">By Francine Mira, REALTOR® &nbsp;|&nbsp; NMLS #2603041 &nbsp;|&nbsp; 4 min read</div>
+    <div class="modal-body">
+      <p>These two terms are often used interchangeably &mdash; but they are not the same thing, and the difference matters enormously when you start making offers.</p>
+      <h2>Pre-Qualification</h2>
+      <p>A pre-qualification is a rough estimate of what you might be able to borrow based on information you self-report. No credit pull (or only a soft pull). No documentation verified. It takes 5 minutes and means very little to a seller reviewing your offer. It is a starting point, not a green light.</p>
+      <h2>Pre-Approval</h2>
+      <p>A pre-approval involves a hard credit pull, income verification (pay stubs, W-2s, tax returns), asset documentation, and a review by a loan officer or underwriter. The result is a conditional commitment to lend up to a specific amount. Sellers and listing agents take this seriously.</p>
+      <h2>What Sellers Actually See</h2>
+      <p>In a competitive market, a pre-approval letter &mdash; especially one from a known local lender &mdash; can be the difference between your offer being accepted or passed over, even if your price is competitive. Some sellers won&rsquo;t entertain offers without one.</p>
+      <div class="modal-cta-box">
+        <strong>Ready to Get Pre-Approved?</strong>
+        <p>As a licensed MLO, I can help you through the pre-approval process and answer questions about what lenders look for.</p>
+        <a href="https://francinemira.com/contact" class="btn-gold">Book a Free Consultation &rarr;</a>
+      </div>
+      <div class="disclaimer"><strong>Educational Disclaimer:</strong> For informational purposes only. Not a commitment to lend. Francine Mira, NMLS #2603041, licensed in North Carolina.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CREDIT ARTICLE -->
+<div class="modal-overlay" id="modal-credit">
+  <div class="modal">
+    <button class="modal-close" onclick="closeArticle('credit')">&times;</button>
+    <span class="modal-tag">Buying Process</span>
+    <h1>Your Credit Score Before You Apply: What Lenders Actually Look At</h1>
+    <div class="modal-meta">By Francine Mira, REALTOR® &nbsp;|&nbsp; NMLS #2603041 &nbsp;|&nbsp; 6 min read</div>
+    <div class="modal-body">
+      <p>Your credit score is a factor &mdash; but it is not the whole story. Lenders look at a full credit picture that goes well beyond three digits.</p>
+      <h2>The Five Factors in Your Credit Score</h2>
+      <ul>
+        <li><strong>Payment History (35%)</strong> &mdash; Late payments, collections, and public records are significant negative marks.</li>
+        <li><strong>Credit Utilization (30%)</strong> &mdash; How much of your available credit you&rsquo;re using. Aim for under 30% on each card before you apply.</li>
+        <li><strong>Length of Credit History (15%)</strong> &mdash; Older accounts in good standing help. Don&rsquo;t close old accounts before applying.</li>
+        <li><strong>New Credit (10%)</strong> &mdash; Recent hard inquiries and newly opened accounts can lower your score. Avoid opening new credit 3-6 months before applying.</li>
+        <li><strong>Credit Mix (10%)</strong> &mdash; A mix of revolving credit (cards) and installment loans (auto, student) is viewed favorably.</li>
+      </ul>
+      <h2>What Not to Do Before Applying</h2>
+      <ul>
+        <li>Do not open new credit cards or take out new loans</li>
+        <li>Do not close existing credit cards</li>
+        <li>Do not max out any card, even to earn points</li>
+        <li>Do not co-sign for anyone else&rsquo;s loan</li>
+        <li>Do not make large unexplained deposits into your bank account</li>
+      </ul>
+      <div class="modal-cta-box">
+        <strong>Want a Credit Review Before You Apply?</strong>
+        <p>Let&rsquo;s review your profile and identify any quick improvements before a lender pulls your credit.</p>
+        <a href="https://francinemira.com/contact" class="btn-gold">Book a Free Consultation &rarr;</a>
+      </div>
+      <div class="disclaimer"><strong>Educational Disclaimer:</strong> For informational purposes only. Not a commitment to lend. Credit score ranges and lending criteria vary by lender and program. Francine Mira, NMLS #2603041, licensed in North Carolina.</div>
+    </div>
+  </div>
+</div>
+
+<!-- BUY PROCESS ARTICLE -->
+<div class="modal-overlay" id="modal-buyprocess">
+  <div class="modal">
+    <button class="modal-close" onclick="closeArticle('buyprocess')">&times;</button>
+    <span class="modal-tag">Buying Process</span>
+    <h1>How the Home Buying Process Actually Works: Step by Step</h1>
+    <div class="modal-meta">By Francine Mira, REALTOR® &nbsp;|&nbsp; NMLS #2603041 &nbsp;|&nbsp; 9 min read</div>
+    <div class="modal-body">
+      <p>Every buyer&rsquo;s journey is different &mdash; but the process follows a consistent structure. Here is what to expect in North Carolina from the moment you decide to buy to the moment you close.</p>
+      <h2>Step 1: Financial Assessment</h2>
+      <p>Before anything else, understand your financial baseline. Review your credit. Estimate your debt-to-income ratio. Know what you have available for down payment and reserves. This shapes every decision that follows.</p>
+      <h2>Step 2: Pre-Approval</h2>
+      <p>Get a real pre-approval (not just pre-qualification) from a lender before you start touring homes. This sets your actual budget and prepares you to make offers confidently.</p>
+      <h2>Step 3: Partner with a REALTOR®</h2>
+      <p>In NC, buyers work with a buyer&rsquo;s agent who is legally obligated to represent your interests. Understand the buyer representation agreement you sign before touring homes &mdash; it defines the terms of your working relationship.</p>
+      <h2>Step 4: Search and Make Offers</h2>
+      <p>Work with your agent to identify properties, tour them, and craft competitive offers. In NC, the Due Diligence process is unique: you pay a negotiated due diligence fee (non-refundable) that gives you the right to back out for any reason within a defined period.</p>
+      <h2>Step 5: Due Diligence Period</h2>
+      <p>Use this time to complete your home inspection, negotiate repairs, finalize your financing, and conduct any additional inspections (radon, foundation, sewer scope, etc.). This is your window to walk away if something is wrong.</p>
+      <h2>Step 6: Closing</h2>
+      <p>Your lender issues a final Closing Disclosure at least 3 business days before closing. Review it carefully. At closing, you sign the final documents, pay closing costs, and receive keys.</p>
+      <div class="modal-cta-box">
+        <strong>Ready to Start the Process?</strong>
+        <p>Let&rsquo;s begin with a conversation about where you are and where you want to go.</p>
+        <a href="https://francinemira.com/contact" class="btn-gold">Book a Free Consultation &rarr;</a>
+      </div>
+      <div class="disclaimer"><strong>Educational Disclaimer:</strong> For informational purposes only. Real estate transactions vary by location, market conditions, and individual circumstances. Francine Mira is a licensed REALTOR® and MLO in North Carolina. NMLS #2603041.</div>
+    </div>
+  </div>
+</div>
+
+<!-- NC PROGRAMS ARTICLE -->
+<div class="modal-overlay" id="modal-ncprograms">
+  <div class="modal">
+    <button class="modal-close" onclick="closeArticle('ncprograms')">&times;</button>
+    <span class="modal-tag">Buying Process</span>
+    <h1>First-Time Buyer Programs in North Carolina</h1>
+    <div class="modal-meta">By Francine Mira, REALTOR® &nbsp;|&nbsp; NMLS #2603041 &nbsp;|&nbsp; 7 min read</div>
+    <div class="modal-body">
+      <p>North Carolina has several programs designed to help buyers who are purchasing for the first time &mdash; or who haven&rsquo;t owned a home in the past three years. These programs can reduce your upfront costs significantly when stacked with the right loan type.</p>
+      <h2>NC Home Advantage Mortgage (NCHFA)</h2>
+      <p>Administered by the NC Housing Finance Agency, this program offers down payment assistance of up to 5% of the loan amount. The assistance is a second mortgage that is forgiven 20% per year starting in Year 11 if you remain in the home. It can be paired with FHA, VA, USDA, or conventional loans.</p>
+      <h2>NC 1st Home Advantage Down Payment</h2>
+      <p>This program provides $15,000 in down payment assistance to eligible first-time buyers (or buyers who haven&rsquo;t owned in 3+ years) and military veterans. It is structured as a deferred second mortgage, meaning no payments are due until the home is sold, refinanced, or the loan matures.</p>
+      <h2>Eligibility Basics (Subject to Change)</h2>
+      <ul>
+        <li>Income limits apply and vary by county and household size</li>
+        <li>Purchase price limits apply</li>
+        <li>Minimum credit score requirements apply (typically 640+)</li>
+        <li>Homebuyer education course may be required</li>
+        <li>Primary residence purchase only</li>
+      </ul>
+      <h2>Important Note</h2>
+      <p>Program availability, income limits, and purchase price limits change frequently. What is available today may differ from what was available last year. Always verify current terms with a participating lender or the NCHFA directly.</p>
+      <div class="modal-cta-box">
+        <strong>Find Out If You Qualify for NC Programs</strong>
+        <p>As a licensed MLO, I can walk you through current program availability and eligibility requirements for your specific situation.</p>
+        <a href="https://francinemira.com/contact" class="btn-gold">Book a Free Consultation &rarr;</a>
+      </div>
+      <div class="disclaimer"><strong>Educational Disclaimer:</strong> For informational purposes only. Program details, income limits, and availability are subject to change without notice. This does not constitute a commitment to lend or program availability guarantee. Francine Mira, NMLS #2603041, licensed in North Carolina.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SELLER COSTS ARTICLE -->
+<div class="modal-overlay" id="modal-sellcosts">
+  <div class="modal">
+    <button class="modal-close" onclick="closeArticle('sellcosts')">&times;</button>
+    <span class="modal-tag">Selling Process</span>
+    <h1>What Sellers Actually Pay at Closing in NC</h1>
+    <div class="modal-meta">By Francine Mira, REALTOR® &nbsp;|&nbsp; NMLS #2603041 &nbsp;|&nbsp; 5 min read</div>
+    <div class="modal-body">
+      <p>Before you list your home, you need to understand your net proceeds &mdash; not just your sale price. Sellers in North Carolina typically pay a range of costs at closing that, combined, can represent 7-10% of the sale price. Here is what to expect.</p>
+      <h2>Agent Commissions</h2>
+      <p>Commissions are negotiable and vary by brokerage and transaction. Following recent industry changes and NAR settlement requirements, commission structures are being disclosed more explicitly. Your listing agreement will specify the commission you agree to pay your listing agent. Buyer agent compensation is now a separate negotiation.</p>
+      <h2>NC Excise Tax (Revenue Stamps)</h2>
+      <p>In North Carolina, sellers pay an excise tax of $2 per $1,000 of the property&rsquo;s sale price. On a $350,000 sale, that is $700 due at closing.</p>
+      <h2>Attorney Fees</h2>
+      <p>NC real estate closings require a licensed closing attorney. Seller-side attorney fees vary but typically range from $400 to $800+, depending on the complexity of the transaction.</p>
+      <h2>Prorated Property Taxes</h2>
+      <p>Property taxes in NC are paid in arrears. You will owe prorated taxes from January 1 through your closing date for the current year, credited to the buyer at closing.</p>
+      <h2>Potential Repair Credits or Concessions</h2>
+      <p>Buyers may negotiate repair credits during due diligence. These are deducted from your proceeds at closing and can range from hundreds to thousands of dollars depending on inspection findings and market conditions.</p>
+      <div class="modal-cta-box">
+        <strong>Want to Know Your Real Net Proceeds?</strong>
+        <p>I can provide a Seller Net Sheet before you list so you know exactly what to expect.</p>
+        <a href="https://francinemira.com/contact" class="btn-gold">Book a Free Consultation &rarr;</a>
+      </div>
+      <div class="disclaimer"><strong>Educational Disclaimer:</strong> For informational purposes only. Costs vary by transaction, municipality, and market conditions. Commission structures are negotiable. Consult a licensed NC REALTOR® for estimates specific to your property. Francine Mira is a licensed REALTOR® in North Carolina.</div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING ARTICLE -->
+<div class="modal-overlay" id="modal-pricing">
+  <div class="modal">
+    <button class="modal-close" onclick="closeArticle('pricing')">&times;</button>
+    <span class="modal-tag">Selling Process</span>
+    <h1>How to Price Your Home in Today&rsquo;s Market</h1>
+    <div class="modal-meta">By Francine Mira, REALTOR® &nbsp;|&nbsp; NMLS #2603041 &nbsp;|&nbsp; 6 min read</div>
+    <div class="modal-body">
+      <p>Overpricing is the single most common and most costly mistake sellers make. Homes priced above market sit. Days on market accumulate. And buyers &mdash; who are sophisticated and have access to the same data you do &mdash; begin to assume something is wrong with the property.</p>
+      <h2>How a CMA Works</h2>
+      <p>A Comparative Market Analysis (CMA) compares your home to recently sold properties with similar square footage, bedroom/bath count, lot size, condition, and location. Adjustments are made for differences. The result is a price range supported by actual market data &mdash; not wishful thinking.</p>
+      <h2>The Cost of Overpricing</h2>
+      <ul>
+        <li>Fewer showings in the critical first 2-3 weeks</li>
+        <li>Stigma from extended days on market</li>
+        <li>Price reductions that attract lowball offers</li>
+        <li>A final sale price that may be lower than if you had priced correctly from the start</li>
+      </ul>
+      <h2>Pricing for Your Market Conditions</h2>
+      <p>In a seller&rsquo;s market, pricing at or slightly below market can generate multiple offers and drive the price up organically. In a balanced or buyer&rsquo;s market, accurate pricing is critical to attracting serious buyers. Your agent should show you current absorption rate data &mdash; how long it takes homes in your area and price range to sell &mdash; before recommending a list price.</p>
+      <div class="modal-cta-box">
+        <strong>Want a Professional CMA for Your Home?</strong>
+        <p>I provide complimentary market analyses for homeowners considering a sale. No obligation.</p>
+        <a href="https://francinemira.com/contact" class="btn-gold">Request a Free CMA &rarr;</a>
+      </div>
+      <div class="disclaimer"><strong>Educational Disclaimer:</strong> For informational purposes only. Market conditions vary by location and time period. Past performance does not guarantee future results. Francine Mira is a licensed REALTOR® in North Carolina.</div>
+    </div>
+  </div>
+</div>
+
+<!-- STAGING ARTICLE -->
+<div class="modal-overlay" id="modal-staging">
+  <div class="modal">
+    <button class="modal-close" onclick="closeArticle('staging')">&times;</button>
+    <span class="modal-tag">Selling Process</span>
+    <h1>Staging on a Budget: What Actually Moves Buyers</h1>
+    <div class="modal-meta">By Francine Mira, REALTOR® &nbsp;|&nbsp; NMLS #2603041 &nbsp;|&nbsp; 5 min read</div>
+    <div class="modal-body">
+      <p>You do not need a professional staging company to present your home well. What you need is an understanding of how buyers experience a home &mdash; and how to remove the friction that causes them to hesitate.</p>
+      <h2>What Buyers Are Actually Looking At</h2>
+      <p>Buyers are making emotional decisions informed by logic. They are asking: Can I see myself here? Does this feel clean and cared for? Is there room for my life? The goal of staging is not decoration &mdash; it is removing barriers to that emotional connection.</p>
+      <h2>Highest ROI Staging Actions</h2>
+      <ul>
+        <li><strong>Deep clean everything</strong> &mdash; Including baseboards, light fixtures, and inside appliances. Smell matters. If you have pets, have the carpet professionally cleaned.</li>
+        <li><strong>Declutter aggressively</strong> &mdash; Remove at least 30% of what is currently in each room. Closets, counters, and garages should look spacious.</li>
+        <li><strong>Neutralize personalization</strong> &mdash; Remove most family photos, religious items, and anything strongly taste-specific. Buyers should be able to project themselves into the space.</li>
+        <li><strong>Maximize light</strong> &mdash; Clean windows, replace dim bulbs, pull back curtains. Bright rooms photograph and show better.</li>
+        <li><strong>Address obvious deferred maintenance</strong> &mdash; Dripping faucets, broken fixtures, peeling paint. These signal to buyers that there may be larger issues they can&rsquo;t see.</li>
+      </ul>
+      <h2>What Not to Over-Invest In</h2>
+      <p>Major renovations rarely return dollar-for-dollar in a sale. A full kitchen remodel before listing is almost never recouped entirely. Focus on condition and cleanliness, not upgrades.</p>
+      <div class="modal-cta-box">
+        <strong>Want a Pre-Listing Walkthrough?</strong>
+        <p>I can walk your home with you before you list and identify the specific changes that will have the most impact in your market.</p>
+        <a href="https://francinemira.com/contact" class="btn-gold">Book a Free Walkthrough &rarr;</a>
+      </div>
+      <div class="disclaimer"><strong>Educational Disclaimer:</strong> For informational purposes only. Results vary by property, condition, and local market. Francine Mira is a licensed REALTOR® in North Carolina.</div>
+    </div>
+  </div>
+</div>
+
+<!-- LISTING AGREEMENT ARTICLE -->
+<div class="modal-overlay" id="modal-listing">
+  <div class="modal">
+    <button class="modal-close" onclick="closeArticle('listing')">&times;</button>
+    <span class="modal-tag">Selling Process</span>
+    <h1>The Listing Agreement: What You&rsquo;re Signing</h1>
+    <div class="modal-meta">By Francine Mira, REALTOR® &nbsp;|&nbsp; NMLS #2603041 &nbsp;|&nbsp; 5 min read</div>
+    <div class="modal-body">
+      <p>The listing agreement is a legally binding contract between you and a brokerage that grants them the right to list and market your property. Most sellers sign without fully understanding what they&rsquo;re agreeing to. Here&rsquo;s what to review before you sign.</p>
+      <h2>Key Terms to Understand</h2>
+      <ul>
+        <li><strong>Listing Period:</strong> How long the brokerage has the exclusive right to sell your home. Typically 3-6 months. Shorter is better in most markets &mdash; if they&rsquo;re confident in the listing, they shouldn&rsquo;t need 12 months.</li>
+        <li><strong>Commission:</strong> The amount or percentage you agree to pay the listing brokerage. This is negotiable. Understand what is and is not included in the commission (photography, marketing, MLS listing, open houses).</li>
+        <li><strong>Protection Clause:</strong> If you sell to a buyer who was introduced to the property during the listing period, the broker may still be entitled to a commission &mdash; even after the agreement ends. Know the terms.</li>
+        <li><strong>Listing Price:</strong> The agreed starting list price. This does not obligate you to accept any offer at that price.</li>
+        <li><strong>Cancellation Terms:</strong> Understand whether you can cancel the agreement and under what conditions. Some agreements have penalties for early termination.</li>
+      </ul>
+      <h2>Questions to Ask Before Signing</h2>
+      <ul>
+        <li>What specific marketing activities are included?</li>
+        <li>Will the home be listed on MLS and major real estate portals?</li>
+        <li>Who handles showings and how are they scheduled?</li>
+        <li>What is your communication cadence with sellers?</li>
+        <li>What happens if I am not satisfied with your service?</li>
+      </ul>
+      <div class="modal-cta-box">
+        <strong>Ready to List Your Home?</strong>
+        <p>Let&rsquo;s talk about your goals and what the listing process looks like before you sign anything.</p>
+        <a href="https://francinemira.com/contact" class="btn-gold">Book a Free Consultation &rarr;</a>
+      </div>
+      <div class="disclaimer"><strong>Educational Disclaimer:</strong> For informational purposes only. Listing agreements vary by brokerage and are negotiable. Consult a licensed NC REALTOR® for advice specific to your situation. Francine Mira is a licensed REALTOR® in North Carolina.</div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  // Tab switching
+  function switchTab(event, category) {
+    document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.cat-panel').forEach(p => p.classList.remove('active'));
+    event.target.classList.add('active');
+    document.getElementById('panel-' + category).classList.add('active');
+  }
+  function switchTabById(category) {
+    document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.cat-panel').forEach(p => p.classList.remove('active'));
+    const tabs = document.querySelectorAll('.cat-tab');
+    const map = { loans: 0, buying: 1, selling: 2 };
+    if (tabs[map[category]]) tabs[map[category]].classList.add('active');
+    const panel = document.getElementById('panel-' + category);
+    if (panel) {
+      panel.classList.add('active');
+      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  // Article modals
+  function openArticle(id) {
+    const overlay = document.getElementById('modal-' + id);
+    if (overlay) {
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+  function closeArticle(id) {
+    const overlay = document.getElementById('modal-' + id);
+    if (overlay) {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Close modals on overlay click
+  document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) {
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+
+  // Close modals on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.open').forEach(overlay => {
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    }
+  });
+</script>
+</body>
+</html>
